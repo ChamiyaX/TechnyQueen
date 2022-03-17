@@ -2316,52 +2316,6 @@ Please Choose Whether Document, Audio or Video Below`
                     })
                     break
 
-                case 'nsfw':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isOwner && !isGroupAdmins) return reply('only admin can use this feature')
-                    if (args.length < 1) return reply(`to activate type : ${prefix}nsfw 1`)
-                    if (Number(args[0]) === 1) {
-                        if (isNsfw) return reply('Already Activated')
-                        nsfw.push(from)
-                        fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
-                        reply('Successfully activated the nsfw feature')
-                        alpha.sendMessage(from, `Free to Find Hentai 🗿`, text)
-                    } else if (Number(args[0]) === 0) {
-                        if (!isNsfw) return reply('Its off')
-                        var ini = nsfw.indexOf(from)
-                        nsfw.splice(ini, 1)
-                        fs.writeFileSync('./database/nsfw.json', JSON.stringify(nsfw))
-                        reply('Successfully disable the nsfw feature')
-                    } else {
-                        reply('1 to turn on, 0 to turn off')
-                    }
-                    break
-                case 'waifu':
-                case 'loli':
-                case 'husbu':
-                case 'milf':
-                case 'cosplay':
-                case 'wallml':
-                    let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-                    let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-                    fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-                    buttons = [{ buttonId: `waifu`, buttonText: { displayText: `➡️Next` }, type: 1 }, { buttonId: `owner`, buttonText: { displayText: '🦄OWNER' }, type: 1 }]
-                    imageMsg = (await alpha.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', { thumbnail: Buffer.alloc(0) })).message.imageMessage
-                    buttonsMessage = {
-                        footerText: 'Dont forget to donate lol ☕',
-                        imageMessage: imageMsg,
-                        contentText: `Click Next to go to the next picture`,
-                        buttons,
-                        headerType: 4
-                    }
-                    prep = await alpha.prepareMessageFromContent(from, { buttonsMessage }, { quoted: mek })
-                    alpha.relayWAMessage(prep)
-                    fs.unlinkSync(`./${sender}.jpeg`)
-                    break
-
-
-
 
 
 
