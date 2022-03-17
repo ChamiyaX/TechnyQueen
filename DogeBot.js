@@ -644,7 +644,7 @@ _Please Type ${prefix}command_`
                                 },
                                 {
                                     "title": "RANDOM IMAGE MENU",
-                                    "description": `ist Of Random Photo Command ` ,
+                                    "description": `ist Of Random Photo Command `,
                                     "rowId": `${prefix}randomimage`
                                 },
                                 {
@@ -682,7 +682,7 @@ _Please Type ${prefix}command_`
                                     "description": `List Of Fun Features Command `,
                                     "rowId": `${prefix}funmenu`
                                 },
-                            
+
                                 {
                                     "title": "OCR MENU",
                                     "description": `List Of Ocr Features`,
@@ -4125,7 +4125,7 @@ Please Choose Whether Document, Audio or Video Below`
                     reply(`Success in changing the name of the bot to ${body.slice(11)}`)
                     break
                 case 'public':
-                    if (!mek.key.fromMe && !isOwner) return reply('Luh Siapa Sih Bang ?')
+                    if (!mek.key.fromMe && !isOwner) return reply('Who the hell is it bro ?')
                     if (self === false) return
                     self = false
                     reply(`\`\`\`MODE - PUBLIC\`\`\``)
