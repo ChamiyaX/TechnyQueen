@@ -3017,6 +3017,29 @@ Please Choose Whether Document, Audio or Video Below`
                     }
                     reply(ini_txt)
                     break
+                    break;
+
+                case "image":
+                case "gimage":
+                case "googleimage":
+                    if (args.length < 1) return reply("What do you want to search?");
+                    reply(mess.wait);
+                    teks = args.join(" ");
+                    res = await gis(teks, google);
+
+                    function google(error, result) {
+                        if (error) {
+                            return reply(
+                                "_[ ! ] Error Found Error Or Result Not Found_"
+                            );
+                        } else {
+                            gugIm = result;
+                            random = gugIm[Math.floor(Math.random() * gugIm.length)].url;
+                            sendMediaURL(from, random);
+                        }
+                    }
+
+
                 case 'revdl':
                     if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
                     query = args.join(' ')
@@ -3206,6 +3229,40 @@ Please Choose Whether Document, Audio or Video Below`
                     buff = await getBuffer(anussweb.screenshot)
                     DogeXeonOP.sendMessage(from, buff, image, { quoted: mek, caption: teks })
                     break
+
+
+                    break;
+                case "image":
+                case "gimage":
+                case "googleimage":
+                    if (args.length < 1) return reply("What do you want to search?");
+                    reply(mess.wait);
+                    teks = args.join(" ");
+                    res = await gis(teks, google);
+
+                    function google(error, result) {
+                        if (error) {
+                            return reply(
+                                "_[ ! ] Error Found Error Or Result Not Found_"
+                            );
+                        } else {
+                            gugIm = result;
+                            random = gugIm[Math.floor(Math.random() * gugIm.length)].url;
+                            sendMediaURL(from, random);
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
 
                     //══════════[ CONVERT FEATURES ]══════════//
 
