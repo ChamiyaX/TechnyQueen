@@ -2134,7 +2134,7 @@ Please Choose Whether Document, Audio or Video Below`
                     randIndex = Math.floor(Math.random() * jsonData.length);
                     randKey = jsonData[randIndex];
                     swordartonline = await getBuffer(randKey.result)
-                    DogeXeonOP.sendMessage(from, swordartonline, image, { quoted: mek, caption: 'swort art online\nDogeBot' })
+                    DogeXeonOP.sendMessage(from, swordartonline, image, { quoted: mek, caption: 'swort art online\nTechny Queen' })
                     break
                 case 'hsdxd':
                     reply(mess.wait)
@@ -3451,7 +3451,7 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'ttp':
                 case 'attp':
 
-                    if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp DogeBot`)
+                    if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp Techny Queen`)
                     atetepe12 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
                     DogeXeonOP.sendMessage(from, atetepe12, sticker, { quoted: mek })
                     break
@@ -3484,7 +3484,7 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'stcmeme':
                 case 'smeme':
                     {
-                        if (args.length < 1) return reply(`Send orders *${prefix + command}* DogeBot`)
+                        if (args.length < 1) return reply(`Send orders *${prefix + command}* Techny Queen`)
                         if (q.includes('|')) return reply(`Reply to an image with a caption, For Example *${prefix + command}* Xeon`)
                         try {
                             if (!isQuotedImage) return reply(`Reply to an image!`)
