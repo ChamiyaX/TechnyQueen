@@ -1728,7 +1728,7 @@ Please Choose Whether Document, Audio or Video Below`
                     bo = args.join(" ")
                     ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
                     mp4 = await getBuffer(ini.url)
-                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video😎` })
+                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ  your video😎 video😎` })
                     break
                 case 'mp3':
                     reply(mess.wait)
@@ -3143,7 +3143,7 @@ Please Choose Whether Document, Audio or Video Below`
                     break
                 case 'stylishcoolname':
                     anuscn = await fetchJson(`https://leyscoders-api.herokuapp.com/api/nick-epep?apikey=${Leyscoders}`)
-                    reply(`*🐶HERE IS YOUR RANDOM STYLISH NAME🐶*\n\n${anuscn.result}`)
+                    reply(`*ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ  your RANDOM STYLISH NAME*\n\n${anuscn.result}`)
                     break
                 case 'ssweb':
                 case 'ss':
