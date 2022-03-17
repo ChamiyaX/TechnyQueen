@@ -77,6 +77,7 @@ gaya2 = setting.gaya2
 const fakeimage = fs.readFileSync('./media/dogepic1.jpg')
 const thumb = fs.readFileSync('./media/dogetb.jpg')
 
+
 //══════════[ Developer Number ]══════════//
 
 developerNo = '94767184785'
@@ -364,7 +365,7 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
             //══════════[ Fake ]══════════//
 
             const listmsg = (from, title, desc, list) => {
-                let po = DogeXeonOP.prepareMessageFromContent(from, { "listMessage": { "title": title, "description": desc, "buttonText": "MENU", "footerText": `${tanggal}`, "listType": "SINGLE_SELECT", "sections": list } }, {})
+                let po = DogeXeonOP.prepareMessageFromContent(from, { "listMessage": { "title": title, "description": desc, "buttonText": "𝗠𝗘𝗡𝗨", "footerText": `${tanggal}`, "listType": "SINGLE_SELECT", "sections": list } }, {})
                 return DogeXeonOP.relayWAMessage(po, { waitForAck: true })
             }
             const reply = (teks) => {
@@ -584,11 +585,9 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                     pemilik = `${owner}@s.whatsapp.net`
                     menu =
                         `*_${ucapanWaktu} @${senderr.split('@')[0]}_*
-
 ❏「 TIME 」
 ${gaya1} *Date* : ${tanggal}
 ${gaya1} *Time* : ${time}
-
 ❏「 INFO BOT 」
 ${gaya1} *Speed* : ${latensie.toFixed(4)} Second
 ${gaya1} *Runtime* : ${runtime(process.uptime())}
@@ -602,7 +601,6 @@ ${gaya1} *Mode :* ${self ? "Self" : "Public"}
 ${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
 ${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
 ${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
-
 ❏「 USER INFO 」
 ${gaya1} *Name* : ${pushname}
 ${gaya1} *Bio* : ${bio_user}
@@ -612,12 +610,12 @@ ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
                         `_Please Select Button Below_
 _If You Are A Mod User_
 _Please Type ${prefix}command_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { disText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
+                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
                     break
                 case 'command':
 
                     listMsg = {
-                        buttonText: 'MENU ',
+                        buttonText: 'MENU 📃',
                         footerText: `*${botname}*`,
                         description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
                         sections: [{
