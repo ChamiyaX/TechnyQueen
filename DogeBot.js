@@ -1771,7 +1771,7 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'nantalia':
 
                     reply(mess.wait)
-                    buffer = await getBuffer(`https://apidhani.herokuapp.com/api/asupan/${command}?apikey=${dhakey}`)
+                    buffer = await getBuffer(`https://apidhani.herokuapp.com/api/asupan/${command}?apikey=${zerkey}`)
                     Teks = `Click Next To Go To Next ${command} `
                     sendButVideo(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [{
                         buttonId: `${prefix+command}`,
@@ -1784,7 +1784,7 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'hijaber':
 
                     reply(mess.wait)
-                    buffer = await getBuffer(`https://apidhani.herokuapp.com/api/asupan/hijaber?apikey=${dhakey}`)
+                    buffer = await getBuffer(`https://apidhani.herokuapp.com/api/asupan/hijaber?apikey=${zerkey}`)
                     Teks = `Click Next To Go to Next ${command}`
                     sendButImage(from, Teks, `*_${tanggal} - ${time}_*`, buffer, [{
                         buttonId: `${prefix+command}`,
