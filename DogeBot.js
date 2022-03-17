@@ -2317,27 +2317,6 @@ Please Choose Whether Document, Audio or Video Below`
                     break
 
 
-                case 'loli':
-                case 'husbu':
-                case 'milf':
-                case 'cosplay':
-                case 'wallml':
-                    let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-                    let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-                    fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-                    buttons = [{ buttonId: `waifu`, buttonText: { displayText: `➡️Next` }, type: 1 }, { buttonId: `owner`, buttonText: { displayText: '🦄OWNER' }, type: 1 }]
-                    imageMsg = (await alpha.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', { thumbnail: Buffer.alloc(0) })).message.imageMessage
-                    buttonsMessage = {
-                        footerText: 'Dont forget to donate lol ☕',
-                        imageMessage: imageMsg,
-                        contentText: `Click Next to go to the next picture`,
-                        buttons,
-                        headerType: 4
-                    }
-                    prep = await alpha.prepareMessageFromContent(from, { buttonsMessage }, { quoted: mek })
-                    alpha.relayWAMessage(prep)
-                    fs.unlinkSync(`./${sender}.jpeg`)
-                    break
 
                     //══════════[ RANDOM VIDEO ]══════════//
 
