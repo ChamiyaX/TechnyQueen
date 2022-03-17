@@ -1728,7 +1728,7 @@ Please Choose Whether Document, Audio or Video Below`
                     bo = args.join(" ")
                     ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
                     mp4 = await getBuffer(ini.url)
-                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ  your video😎 video😎` })
+                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁ your video😎` })
                     break
                 case 'mp3':
                     reply(mess.wait)
@@ -1903,37 +1903,37 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'fox':
                     anufox = await fetchJson(`https://some-random-api.ml/img/fox`)
                     anu1 = await getBuffer(anufox.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'dog':
                     anudog = await fetchJson(`https://some-random-api.ml/img/dog`)
                     anu1 = await getBuffer(anudog.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'cat':
                     anucat = await fetchJson(`https://some-random-api.ml/img/cat`)
                     anu1 = await getBuffer(anucat.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'panda':
                     anupanda = await fetchJson(`https://some-random-api.ml/img/panda`)
                     anu1 = await getBuffer(anupanda.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'panda1':
                     anupandao = await fetchJson(`https://some-random-api.ml/img/red_panda`)
                     anu1 = await getBuffer(anupandao.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'bird':
                     anubird = await fetchJson(`https://some-random-api.ml/img/birb`)
                     anu1 = await getBuffer(anubird.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'koala':
                     anukoala = await fetchJson(`https://some-random-api.ml/img/koala`)
                     anu1 = await getBuffer(anukoala.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     break
                 case 'ppcp':
                 case 'ppcouple':
@@ -2333,7 +2333,7 @@ Please Choose Whether Document, Audio or Video Below`
                     if (args.length == 0) return reply(`Example: ${prefix + command} Xeon`)
                     ini_txt = args.join(" ")
                     getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-                        DogeXeonOP.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
+                        DogeXeonOP.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁`, quoted: mek })
                     })
                     break
                 case 'blackpink':
@@ -3143,7 +3143,7 @@ Please Choose Whether Document, Audio or Video Below`
                     break
                 case 'stylishcoolname':
                     anuscn = await fetchJson(`https://leyscoders-api.herokuapp.com/api/nick-epep?apikey=${Leyscoders}`)
-                    reply(`*ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ  your RANDOM STYLISH NAME*\n\n${anuscn.result}`)
+                    reply(`*▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁ your RANDOM STYLISH NAME*\n\n${anuscn.result}`)
                     break
                 case 'ssweb':
                 case 'ss':
