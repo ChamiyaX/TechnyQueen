@@ -644,7 +644,7 @@ _Please Type ${prefix}command_`
                                 },
                                 {
                                     "title": "RANDOM IMAGE MENU",
-                                    "description": `List Of Random Photo Command ,
+                                    "description": `ist Of Random Photo Command ` ,
                                     "rowId": `${prefix}randomimage`
                                 },
                                 {
