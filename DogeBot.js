@@ -1735,24 +1735,27 @@ Please Choose Whether Document, Audio or Video Below`
                     mp3 = await getBuffer(ini.url)
                     DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
                     break
+                case 'playm2':
                 case 'ytmp3':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (args.length === 0) return reply(`Send orders *${prefix}ytmp3 [linkYt]*`)
-                    let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
-                    if (!isLinks) return reply(mess.error.Iv)
+                    if (args.length === 0) return reply(`Send orders *${prefix}play* _The title of the song to be search for_`)
+                    var srch = args.join(' ')
+                    aramas = await yts(srch);
+                    aramat = aramas.all
+                    var mulaikah = aramat[0].url
                     try {
-                        sticWait(from)
-                        yta(args[0])
+                        yta(mulaikah)
                             .then((res) => {
                                 const { dl_link, thumb, title, filesizeF, filesize } = res
                                 axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
-                                    .then((a) => {
-                                        if (Number(filesize) >= 30000) return sendMediaURL(from, thumb, `❏ *YTmp3*\n\n❏ *Title* : ${title}\n❏ *Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Sorry, the duration exceeds the maximum limit, please click the link above_`)
-                                        sendFileFromUrl(dl_link, document, { mimetype: 'audio/mp3', filename: `${title}.mp3`, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply: { title: title, body: "🐶 YTMP3", mediaType: "2", thumbnail: getBuffer(thumb), mediaUrl: `${body.slice(7)}` } } }).catch(() => reply(mess.error.api))
+                                    .then(async(a) => {
+                                        if (Number(filesize) >= 100000) return sendMediaURL(from, thumb, `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_For the duration of more than the limit is presented in the form of a link_`)
+                                        const captions = `🎧 *PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Please wait for the media file to be sent it may take a few minutes_`
+                                        await sendMediaURL(from, thumb, captions)
+                                        sendMediaURL(from, dl_link).catch(() => reply('error'))
                                     })
                             })
                     } catch (err) {
-                        reply(mess.error.api)
+                        reply('There is an error')
                     }
                     break
                 case 'ytmp32':
@@ -1793,8 +1796,6 @@ Please Choose Whether Document, Audio or Video Below`
                     } catch (err) {
                         reply(mess.error.api);
                     }
-
-
 
 
                 case 'ytmp41':
