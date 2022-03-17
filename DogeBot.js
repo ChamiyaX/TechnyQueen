@@ -2359,60 +2359,7 @@ Please Choose Whether Document, Audio or Video Below`
                     alpha.relayWAMessage(prep)
                     fs.unlinkSync(`./${sender}.jpeg`)
                     break
-                case 'awoo':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://waifu.pics/api/sfw/awoo`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
-                case 'blowjob':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://nekos.life/api/v2/img/blowjob`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
-                case 'hentai':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://waifu.pics/api/nsfw/neko`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
-                case 'megumin2':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://waifu.pics/api/sfw/megumin`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
-                case 'neko':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://waifu.pics/api/nsfw/neko`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
-                case 'trapnime':
-                    if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek })
-                    if (!isGroup) return reply('this feature is only for groups')
-                    if (!isNsfw) return reply(`Nsfw feature is not yet active in this group\nType: ${prefix}nsfw 1 \To activate`)
-                    reply(mess.wait)
-                    anu = await fetchJson(`https://waifu.pics/api/nsfw/trap`)
-                    buffer = await getBuffer(anu.url)
-                    alpha.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./nsfwdoge.jpg') })
-                    break
+
 
 
 
