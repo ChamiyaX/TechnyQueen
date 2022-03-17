@@ -610,12 +610,12 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                         `_Please Select Button Below_
                     _If You Are A Mod User_
                     _Please Type ${prefix}command_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
+                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
                     break
                 case 'command':
 
                     listMsg = {
-                        buttonText: 'MENU 📃',
+                        buttonText: 'MENU ',
                         footerText: `*${botname}*`,
                         description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
                         sections: [{
