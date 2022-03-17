@@ -1903,37 +1903,37 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'fox':
                     anufox = await fetchJson(`https://some-random-api.ml/img/fox`)
                     anu1 = await getBuffer(anufox.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'dog':
                     anudog = await fetchJson(`https://some-random-api.ml/img/dog`)
                     anu1 = await getBuffer(anudog.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'cat':
                     anucat = await fetchJson(`https://some-random-api.ml/img/cat`)
                     anu1 = await getBuffer(anucat.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'panda':
                     anupanda = await fetchJson(`https://some-random-api.ml/img/panda`)
                     anu1 = await getBuffer(anupanda.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'panda1':
                     anupandao = await fetchJson(`https://some-random-api.ml/img/red_panda`)
                     anu1 = await getBuffer(anupandao.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'bird':
                     anubird = await fetchJson(`https://some-random-api.ml/img/birb`)
                     anu1 = await getBuffer(anubird.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'koala':
                     anukoala = await fetchJson(`https://some-random-api.ml/img/koala`)
                     anu1 = await getBuffer(anukoala.link)
-                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `Here you go!`, quoted: mek })
+                    DogeXeonOP.sendMessage(from, anu1, image, { caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     break
                 case 'ppcp':
                 case 'ppcouple':
@@ -2333,7 +2333,7 @@ Please Choose Whether Document, Audio or Video Below`
                     if (args.length == 0) return reply(`Example: ${prefix + command} Xeon`)
                     ini_txt = args.join(" ")
                     getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-                        DogeXeonOP.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `Here you go!`, quoted: mek })
+                        DogeXeonOP.sendMessage(from, gambar, image, { thumbnail: Buffer.alloc(0), caption: `ᵀᵉᶜʰⁿʸ Qᵘᵉᵉⁿ `, quoted: mek })
                     })
                     break
                 case 'blackpink':
@@ -4114,15 +4114,15 @@ Please Choose Whether Document, Audio or Video Below`
                     if (args.length < 1) return reply('The text?')
                     iyek = body.slice(8)
                     DogeXeonOP.setStatus(`${iyek}`)
-                    reply(`Success changing bio to ${body.slice(8)}`)
+                    reply(`Success ✅ changing bio to ${body.slice(8)}`)
                     break
                 case 'setbotname':
 
                     if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
-                    if (args.length < 1) return reply('Teksnya?')
+                    if (args.length < 1) return reply('The text?')
                     anuoke112 = body.slice(11)
                     DogeXeonOP.updateProfileName(anuoke112)
-                    reply(`Success in changing the name of the bot to ${body.slice(11)}`)
+                    reply(`Success ✅ in changing the name of the bot to ${body.slice(11)}`)
                     break
                 case 'public':
                     if (!mek.key.fromMe && !isOwner) return reply('Who the hell is it bro ?')
@@ -4248,7 +4248,7 @@ Please Choose Whether Document, Audio or Video Below`
                     vien.push(`${nm}`)
                     fs.writeFileSync(`./media/vn/${nm}.mp3`, delb)
                     fs.writeFileSync('./database/vien.json', JSON.stringify(vien))
-                    DogeXeonOP.sendMessage(from, `Success, please check with *${prefix}vnlist*`, MessageType.text, { quoted: mek })
+                    DogeXeonOP.sendMessage(from, `Success ✅, please check with *${prefix}vnlist*`, MessageType.text, { quoted: mek })
                     break
                 case 'delvn':
                     if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
@@ -4257,7 +4257,7 @@ Please Choose Whether Document, Audio or Video Below`
                         wanudelvn = vien.indexOf(nmm)
                         vien.splice(wanudelvn, 1)
                         fs.unlinkSync(`./media/vn/${nmm}.mp3`)
-                        reply(`Successfully deleted vn ${body.slice(7)}`)
+                        reply(`Success ✅fully deleted vn ${body.slice(7)}`)
                     } catch (err) {
                         console.log(err)
                         reply(mess.error.api)
@@ -4282,7 +4282,7 @@ Please Choose Whether Document, Audio or Video Below`
                     imagi.push(`${nm}`)
                     fs.writeFileSync(`./media/image/${nm}.jpg`, delb)
                     fs.writeFileSync('./database/imagi.json', JSON.stringify(imagi))
-                    DogeXeonOP.sendMessage(from, `Success, please check with *${prefix}imglist*`, MessageType.text, { quoted: mek })
+                    DogeXeonOP.sendMessage(from, `Success ✅, please check with *${prefix}imglist*`, MessageType.text, { quoted: mek })
                     break
                 case 'delimage':
                     if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
@@ -4291,7 +4291,7 @@ Please Choose Whether Document, Audio or Video Below`
                         wanudelimg = imagi.indexOf(nmm)
                         imagi.splice(wanudelimg, 1)
                         fs.unlinkSync(`./media/image/${nmm}.jpg`)
-                        reply(`Successfully deleted image ${body.slice(10)}`)
+                        reply(`Success ✅fully deleted image ${body.slice(10)}`)
                     } catch (err) {
                         console.log(err)
                         reply(mess.error.api)
@@ -4316,7 +4316,7 @@ Please Choose Whether Document, Audio or Video Below`
                     setik.push(`${nm}`)
                     fs.writeFileSync(`./media/sticker/${nm}.webp`, delb)
                     fs.writeFileSync('./database/setik.json', JSON.stringify(setik))
-                    DogeXeonOP.sendMessage(from, `Success, please check with *${prefix}liststicker*`, MessageType.text, { quoted: mek })
+                    DogeXeonOP.sendMessage(from, `Success ✅, please check with *${prefix}liststicker*`, MessageType.text, { quoted: mek })
                     break
                 case 'delsticker':
                     if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
@@ -4325,7 +4325,7 @@ Please Choose Whether Document, Audio or Video Below`
                         wanudelstick = setik.indexOf(nmm)
                         setik.splice(wanudelstick, 1)
                         fs.unlinkSync(`./media/sticker/${nmm}.webp`)
-                        reply(`Successfully deleted the sticker ${body.slice(12)}`)
+                        reply(`Success ✅fully deleted the sticker ${body.slice(12)}`)
                     } catch (err) {
                         console.log(err)
                         reply(mess.error.api)
@@ -4356,7 +4356,7 @@ Please Choose Whether Document, Audio or Video Below`
                             anucgc.push(mentioned[i])
                         }
                         DogeXeonOP.groupCreate(argz[0], anucgc)
-                        reply(`Success in creating a group ${argz[0]}`)
+                        reply(`Success ✅ in creating a group ${argz[0]}`)
                     }
                     break
                 case 'getbio':
@@ -4491,14 +4491,14 @@ Please Choose Whether Document, Audio or Video Below`
                     if (!isGroup) return reply(mess.only.group)
                     if (!isGroupAdmins) return reply(mess.group)
                     if (!isBotGroupAdmins) return sticNotAdmin(from)
-                    reply(`Successful opening group ${groupName}`)
+                    reply(`Success ✅ful opening group ${groupName}`)
                     DogeXeonOP.groupSettingChange(from, GroupSettingChange.messageSend, false)
                     break
                 case 'closegc':
                     if (!isGroup) return reply(mess.only.group)
                     if (!isGroupAdmins) return reply(mess.only.admin)
                     if (!isBotGroupAdmins) return sticNotAdmin(from)
-                    reply(`Successfully closing the group ${groupName}`)
+                    reply(`Success ✅fully closing the group ${groupName}`)
                     DogeXeonOP.groupSettingChange(from, GroupSettingChange.messageSend, true)
                     break
                 case 'grouplink':
