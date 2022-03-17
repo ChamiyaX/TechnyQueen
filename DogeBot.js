@@ -1733,7 +1733,7 @@ Please Choose Whether Document, Audio or Video Below`
                     bo = args.join(" ")
                     ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
                     mp3 = await getBuffer(ini.url)
-                    DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+                    DogeXeonOP.sendMessage(from, voice, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
                     break
                 case 'playm2':
                 case 'ytmp3':
