@@ -46,7 +46,8 @@ https://github.com/DuckyTeam/heroku-buildpack-imagemagick
 heroku/nodejs
 ```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ChamiyaX/newD/)
+<<<<<<< HEAD
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ChamiyaX/TechnyQueen-V2.0/)
 
 # Install Manually 👇
 ## `Requirements`
@@ -100,3 +101,6 @@ My Whatsapp Group👇
 # Thanks To 👇
 * [`Baileys`](https://github.com/adiwajshing/Baileys)
 * [`Xeon`](https://github.com/DGXeon)
+=======
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ChamiyaX/TechnyQueen/)
+>>>>>>> 6f7a8eaacb0c6213faa8cc9035b2e1703245278d
