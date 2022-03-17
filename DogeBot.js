@@ -1764,7 +1764,40 @@ Please Choose Whether Document, Audio or Video Below`
                     reply(`_Audio is being processed, please wait a while longer_`)
                     DogeXeonOP.sendMessage(from, ytmp3, audio, { mimetype: "audio/mp4", quoted: mek })
                     break
-                case 'ytmp4':
+
+                case "ytmp4":
+                    if (args.length === 0)
+                        return reply(`Send orders *${prefix}ytmp4 [linkYt]*`);
+                    let isLinks2 = args[0].match(
+                        /(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/
+                    );
+                    if (!isLinks2) return reply(mess.error.Iv);
+                    try {
+                        reply(mess.wait);
+                        ytv(args[0]).then((res) => {
+                            const { dl_link, thumb, title, filesizeF, filesize } = res;
+                            axios
+                                .get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
+                                .then((a) => {
+                                    if (Number(filesize) >= 9999999)
+                                        return sendMediaURL(
+                                            from,
+                                            thumb,
+                                            `*YTMP 4!*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_For the duration of more than the limit is presented in the link_`
+                                        );
+                                    const captionsYtmp4 = `*Data Successfully Obtained!*\n\n*Title* : ${title}\n*Ext* : MP4\n*Size* : ${filesizeF}\n\n_Please wait for the media file to be sent it may take a few minutes_`;
+                                    sendMediaURL(from, thumb, captionsYtmp4);
+                                    sendMediaURL(from, dl_link).catch(() => reply(mess.error.api));
+                                });
+                        });
+                    } catch (err) {
+                        reply(mess.error.api);
+                    }
+
+
+
+
+                case 'ytmp41':
 
                     if (args.length < 1) return reply("Where is the link?")
                     url = args.join(' ')
