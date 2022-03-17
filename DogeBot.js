@@ -115,22 +115,22 @@ const imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
 
 const time2 = moment().tz('Asia/Colombo').format('HH:mm:ss')
 if (time2 < "23:59:00") {
-    var ucapanWaktu = 'Good night 🌌'
+    var ucapanWaktu = 'Good night  🌃'
 }
 if (time2 < "19:00:00") {
-    var ucapanWaktu = 'Good afternoon 🌆'
+    var ucapanWaktu = 'Good afternoon ☀️ '
 }
 if (time2 < "18:00:00") {
-    var ucapanWaktu = 'Good afternoon 🌇'
+    var ucapanWaktu = 'Good afternoon  🌞'
 }
 if (time2 < "15:00:00") {
-    var ucapanWaktu = 'Good afternoon 🏞'
+    var ucapanWaktu = 'Good afternoon  ☀️'
 }
 if (time2 < "11:00:00") {
-    var ucapanWaktu = 'Good morning 🌅'
+    var ucapanWaktu = 'Good morning  🌤'
 }
 if (time2 < "05:00:00") {
-    var ucapanWaktu = 'Good night 🏙'
+    var ucapanWaktu = 'Good night  🌃'
 }
 
 //══════════[ Module Export ]══════════//
@@ -270,19 +270,19 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
             //══════════[ Mess Dll ]══════════//
 
             mess = {
-                wait: 'In process...',
-                eror: 'Sorry an error occurred!!',
-                success: 'Done✓',
+                wait: 'ටිකක් ඉන්න processing...😌',
+                eror: 'Sorry an error occurred ⚠️',
+                success: 'Done ✅',
                 error: {
-                    stick: 'Thats not a sticker bro !!',
-                    Iv: 'Link invalid !!'
+                    stick: 'Thats not a sticker bro 🤨',
+                    Iv: 'Link invalid ❎'
                 },
                 only: {
                     nsfw: 'The nsfw feature has not been activated, please contact the admin to activate',
-                    group: 'This feature is only for group!!',
-                    owner: 'This feature is only for owner!!',
-                    admin: 'This feature is onlu for admin!!',
-                    Badmin: 'Please give adminship to the bot first!!'
+                    group: 'This feature is only for group ⛔',
+                    owner: 'This feature is only for owner ⛔',
+                    admin: 'This feature is onlu for admin ⛔',
+                    Badmin: 'Please give adminship to the bot first 😊'
                 }
             }
 
@@ -364,7 +364,7 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
             //══════════[ Fake ]══════════//
 
             const listmsg = (from, title, desc, list) => {
-                let po = DogeXeonOP.prepareMessageFromContent(from, { "listMessage": { "title": title, "description": desc, "buttonText": "𝗠𝗘𝗡𝗨", "footerText": `${tanggal}`, "listType": "SINGLE_SELECT", "sections": list } }, {})
+                let po = DogeXeonOP.prepareMessageFromContent(from, { "listMessage": { "title": title, "description": desc, "buttonText": "MENU", "footerText": `${tanggal}`, "listType": "SINGLE_SELECT", "sections": list } }, {})
                 return DogeXeonOP.relayWAMessage(po, { waitForAck: true })
             }
             const reply = (teks) => {
@@ -510,15 +510,15 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                         addLevelingLevel(sender, 1)
                         var lvlup = (`╭───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」
 │
-├ 💜 𝗡𝗮𝗺𝗲 : ${pushname}
-├ 📱 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
-├ 🏅 𝗥𝗮𝗻𝗸 : ${role}
-├ 🔖 𝗫𝗣 : ${getLevelingXp(sender)}
-├ 💠 𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
+├ 🔶𝗡𝗮𝗺𝗲 : ${pushname}
+├ 🔶𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
+├ 🔶𝗥𝗮𝗻𝗸 : ${role}
+├ 🔶𝗫𝗣 : ${getLevelingXp(sender)}
+├ 🔶𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
 │
 ╰───「 *🥳ʟᴇᴠᴇʟ ᴜᴘ🥳* 」`)
-                        but = [{ buttonId: `!menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }]
-                        sendButton(from, lvlup, '*Doge Bot*', but)
+                        but = [{ buttonId: `!menu`, buttonText: { displayText: 'MENU' }, type: 1 }]
+                        sendButton(from, lvlup, '*Te*', but)
 
                     }
                 } catch (err) {
@@ -617,109 +617,105 @@ _Please Type ${prefix}command_`
                 case 'command':
 
                     listMsg = {
-                        buttonText: 'MENU 📃',
+                        buttonText: 'MENU ',
                         footerText: `*${botname}*`,
                         description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
                         sections: [{
                             "title": `${tanggal} - ${time}`,
                             rows: [{
                                     "title": "GROUP MENU",
-                                    "description": `Display A List Of Group Features`,
+                                    "description": `Group වල පාවිච්චි කරන Command 💢`,
                                     "rowId": `${prefix}grupmenu`
                                 },
                                 {
                                     "title": "DOWNLOAD MENU",
-                                    "description": `Display A List Of Features To Download`,
+                                    "description": `Download කරන්න පාවිච්චි කරන  Command `,
                                     "rowId": `${prefix}downloadmenu`
                                 },
                                 {
                                     "title": "MAKER MENU",
-                                    "description": `Display A List Of Features To Create Logo`,
+                                    "description": `Logo වගේ ඒවා හදාගන්න පුලුවන් command `,
                                     "rowId": `${prefix}makermenu`
                                 },
                                 {
                                     "title": "GAME MENU",
-                                    "description": `Display A List Of Game Features`,
+                                    "description": `List Of Game Features Command `,
                                     "rowId": `${prefix}gamemenu`
                                 },
                                 {
                                     "title": "RANDOM IMAGE MENU",
-                                    "description": `Display A List Of Random Photo Features`,
+                                    "description": `List Of Random Photo Command ,
                                     "rowId": `${prefix}randomimage`
                                 },
                                 {
                                     "title": "RANDOM VIDEO",
-                                    "description": `Display A List Of Random Video Features`,
+                                    "description": `List Of Random Video Command `,
                                     "rowId": `${prefix}randomvideo`
                                 },
                                 {
                                     "title": "AESTHETIC GIRL MENU",
-                                    "description": `Display A List Of 18+ Intake Features`,
+                                    "description": `🔞Features`,
                                     "rowId": `${prefix}asupanmenu`
                                 },
                                 {
                                     "title": "RANDOM GIRL MENU",
-                                    "description": `Display A List Of Random Girl Features`,
+                                    "description": `List Of Random Girl Features`,
                                     "rowId": `${prefix}cecanmenu`
                                 },
                                 {
                                     "title": "ANIME MENU",
-                                    "description": `Display A List Of Anime Features`,
+                                    "description": `List Of Anime Photos Command `,
                                     "rowId": `${prefix}animemenu`
                                 },
                                 {
                                     "title": "NSFW/HENTAI MENU",
-                                    "description": `Display A List Of Nsfw 18+ Features`,
+                                    "description": `🔞 Features`,
                                     "rowId": `${prefix}nsfwmenu`
                                 },
                                 {
                                     "title": "STICKER MENU",
-                                    "description": `Display A List Of Sticker Features`,
+                                    "description": `List Of Sticker Features Command `,
                                     "rowId": `${prefix}stickermenu`
                                 },
                                 {
                                     "title": "FUN MENU",
-                                    "description": `Display A List Of Fun Features`,
+                                    "description": `List Of Fun Features Command `,
                                     "rowId": `${prefix}funmenu`
                                 },
-                                {
-                                    "title": "SOUND MENU",
-                                    "description": `Display A List Of Sounds`,
-                                    "rowId": `${prefix}soundmenu`
-                                },
+                            
                                 {
                                     "title": "OCR MENU",
-                                    "description": `Display A List Of Ocr Features`,
+                                    "description": `List Of Ocr Features`,
                                     "rowId": `${prefix}ocrmenu`
                                 },
                                 {
                                     "title": "CONVERTER MENU",
-                                    "description": `Display A List Of Convert Features`,
+                                    "description": ` List Of Convert Features`,
                                     "rowId": `${prefix}convertmenu`
                                 },
                                 {
                                     "title": "LEVELING MENU",
-                                    "description": `Display A List Of Leveling Features`,
+                                    "description": `List Of Leveling Features`,
                                     "rowId": `${prefix}levelingmenu`
                                 },
                                 {
                                     "title": "SEARCH MENU",
-                                    "description": `Display A List Of Searching Features`,
+                                    "description": `List Of Searching Features`,
                                     "rowId": `${prefix}searchmenu`
                                 },
                                 {
                                     "title": "APK MENU",
-                                    "description": `Display A List Of Apk Features`,
+                                    "description": `List Of Apk Features`,
                                     "rowId": `${prefix}apkmenu`
                                 },
                                 {
                                     "title": "OTHER MENU",
-                                    "description": `Display A List Of Other Features`,
+                                    "description": `List Of Other Features`,
                                     "rowId": `${prefix}othermenu`
                                 },
                                 {
                                     "title": "OWNER MENU",
-                                    "description": `Display A List Of Owner Features`,
+                                    "description": `List Of Owner ගේ මෙනු එක 😂`,
                                     "rowId": `${prefix}ownermenu`
                                 }
                             ]
@@ -1456,16 +1452,16 @@ ${gaya2} ${prefix}self`
                         `*${ucapanWaktu} @${senderr.split('@')[0]}*
 
 \`\`\`OPEN FOR RENT :\`\`\`
-➪ *1 Week :* _100INR_
-➪ *1 Month :* _200INR_
-➪ *Permanent :* _550INR_
+➪ *1 Week :* Free🤟
+➪ *1 Month :* Free🤟
+➪ *Permanent :* Free🤟
 
 \`\`\`OPEN FOR STUDENTS :\`\`\`
-➪ *Ordinary student :* _500INR_
-➪ *Premium student :* _1000INR_
+➪ *Ordinary student :* Free🤟
+➪ *Premium student :* Free🤟
 
 \`\`\`OPEN FOR SC :\`\`\`
-➪ *Wanna buy this script? :* _Price: ₹250 (India)_
+➪ *Wanna buy this script? :*  No Sale 💢
 
 For those who want to buy script or interested in any of the above
 Can request, if interested please contact the developer`
@@ -1732,7 +1728,7 @@ Please Choose Whether Document, Audio or Video Below`
                     bo = args.join(" ")
                     ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
                     mp4 = await getBuffer(ini.url)
-                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🐶` })
+                    DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video😎` })
                     break
                 case 'mp3':
                     reply(mess.wait)
@@ -1757,7 +1753,7 @@ Please Choose Whether Document, Audio or Video Below`
                     anump4 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp4?url=${url}&apikey=${dhakey}`)
                     ytmp4 = await getBuffer(anump4.result.url)
                     reply(`_The video is being processed, please wait a few more moments_`)
-                    DogeXeonOP.sendMessage(from, ytmp4, video, { caption: `Done✓`, thumbnail: Buffer.alloc(0), quoted: mek })
+                    DogeXeonOP.sendMessage(from, ytmp4, video, { caption: `Done✅`, thumbnail: Buffer.alloc(0), quoted: mek })
                     break
 
                     //══════════[ INTAKE FEATURES ]══════════//
@@ -2817,7 +2813,7 @@ Please Choose Whether Document, Audio or Video Below`
                     DogeXeonOP.sendMessage(from, { displayName: `The owner ${botname}`, vcard: vcard2 }, contact, {
                         quoted: fgi,
                     })
-                    reply(`_The above contact is my owner 🐶🦄_`)
+                    reply(`_The above contact is my owner👤_`)
                     break
                 case 'developer':
 
@@ -2842,7 +2838,7 @@ Please Choose Whether Document, Audio or Video Below`
                 case 'sourcode':
 
                     scpic = fs.readFileSync('./media/scpic.jpg')
-                    scsell = `*🐶𝗗𝗼𝗴𝗲 𝗕𝗼𝘁 𝗩𝟯 𝗦𝗰𝗿𝗶𝗽𝘁🐶*\n\n_• 𝒀𝒐𝒖𝑻𝒖𝒃𝒆: https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A_\n_• 𝑮𝒊𝒕𝑯𝒖𝒃: https://github.com/DGXeon/DogeBot3_\n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
+                    scsell = `*💢Techny Queen Scripts 💢*\n\n_• Web Site: https://chamiyapage.netlify.app/ \n_• Github: https://github.com/chamiyax \n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
                     but = [
                         { buttonId: `${prefix}rentbot`, buttonText: { displayText: 'BUY SCRIPT 💵' }, type: 1 },
                         { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }
