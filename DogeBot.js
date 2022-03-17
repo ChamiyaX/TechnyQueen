@@ -2824,7 +2824,7 @@ Please Choose Whether Document, Audio or Video Below`
                     vcard2 = 'BEGIN:VCARD\n' +
                         'VERSION:3.0\n' +
                         `FN:${developerName}\n` +
-                        `ORG: Developer Of Doge Bot ;\n` +
+                        `ORG: Developer Of TechnyQueen Bot ;\n` +
                         `TEL;type=CELL;type=VOICE;waid=${developerNo}:${developerNo}\n` +
                         'END:VCARD'.trim()
                     DogeXeonOP.sendMessage(from, { displayName: `The owner ${botname}`, vcard: vcard2 }, contact, {
