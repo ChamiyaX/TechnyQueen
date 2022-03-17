@@ -2,7 +2,7 @@
     "self": false,
     "autoread": false,
     "autoketik": false,
-    "autovn": false,
+    "autovn": true,
     "OwnerNumber": "94767184785",
     "OwnerName": "Chamindu",
     "BotName": "Techny Queen",
