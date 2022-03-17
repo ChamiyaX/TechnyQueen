@@ -779,8 +779,8 @@ ${gaya2} ${prefix}tiktok _Link_
 ${gaya2} ${prefix}tiktoknowm _Link_
 ${gaya2} ${prefix}tiktokwm _Link_
 ${gaya2} ${prefix}tiktokmp3 _Link_
-${gaya2} ${prefix}ytmp3 _Link_
-${gaya2} ${prefix}ytmp4 _Link_
+${gaya2} ${prefix}mp3 _Youtube Link_
+${gaya2} ${prefix}mp4 _Youtube Link_
 ${gaya2} ${prefix}play _song name_
 ${gaya2} ${prefix}instagram _video link_
 ${gaya2} ${prefix}herodetail _hero name_
