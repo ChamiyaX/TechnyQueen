@@ -610,7 +610,7 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                         `_Please Select Button Below_
                     _If You Are A Mod User_
                     _Please Type ${prefix}command_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
+                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], previewType:"PHOTO",thumbnail:fs.readFileSync('./media/dogepic1.jpg'), 'buttonsMessage')
                     break
                 case 'command':
 
@@ -1474,7 +1474,7 @@ Can request, if interested please contact the developer`
 • Note: Talk to the owner before payment
 • FamPay : _Please scan the qr above_`
                     but = [
-                        { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },
+                        { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
                         { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }
                     ]
                     sendButImage(from, menunya, `*_${tanggal} - ${time}_*`, gambar, but)
@@ -4136,7 +4136,7 @@ Please Choose Whether Document, Audio or Video Below`
                                 "buttons": [{
                                     "buttonId": `${prefix}menu`,
                                     "buttonText": {
-                                        "displayText": "MENU 🗃️"
+                                        "displayText": "MENU"
                                     },
                                     "type": "RESPONSE"
                                 }],
