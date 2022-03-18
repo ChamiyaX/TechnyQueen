@@ -1727,7 +1727,7 @@ reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp3', ptt: true, quoted: mek})
+DogeXeonOP.sendMessage(from, mp3, audio, { quoted: mek})
 break
 case 'ytmp3':
 
