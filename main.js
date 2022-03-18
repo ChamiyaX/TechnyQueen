@@ -55,7 +55,7 @@ const starts = async(DogeXeonOP = new WAConnection()) => {
             success('2', 'Connected ✓')
         })
         //inform to developer that the user is connected to bot
-    DogeXeonOP.sendMessage(`94767184785@s.whatsapp.net`, `Hey bro, your bot is working now✔`, MessageType.extendedText)
+    DogeXeonOP.sendMessage(`94767184785@s.whatsapp.net`, `Hey bro, your bot is working now✅`, MessageType.extendedText)
 
     //group link target
     teks = `https://chat.whatsapp.com/HwX5L22xLMXDmjqdUuB5uz`
