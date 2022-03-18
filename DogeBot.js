@@ -514,7 +514,7 @@ for (let anji of setik){
 ├ ✅ 𝗡𝗮𝗺𝗲 : ${pushname}
 ├ ✅ 𝗡𝘂𝗺𝗯𝗲𝗿 : ${sender.split('@')[0]}
 ├ ✅ 𝗥𝗮𝗻𝗸 : ${role}
-├✅  𝗫𝗣 : ${getLevelingXp(sender)}
+├ ✅  𝗫𝗣 : ${getLevelingXp(sender)}
 ├ ✅  𝗟𝗲𝘃𝗲𝗹  : ${getLevelingLevel(sender)}
 │
 ╰───「👻 *ʟᴇᴠᴇʟ ᴜᴘ* 👻」`)
@@ -579,6 +579,7 @@ switch (command) {
 case 'menu':
 case 'help':
 
+
 timestampe = speed();
 latensie = speed() - timestampe
 const { wa_version, os_version } = DogeXeonOP.user.phone
@@ -614,6 +615,7 @@ teks =
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT ' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER ' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
+
 
 listMsg = {
 buttonText: 'MENU ',
@@ -769,6 +771,7 @@ ${gaya2} ${prefix}resetgrouplink`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
+gambar = fs.readFileSync('./media/doged.jpg')
 
 menu =
 `*「 DOWNLOAD MENU 」*
@@ -781,8 +784,8 @@ ${gaya2} ${prefix}tiktok _Link_
 ${gaya2} ${prefix}tiktoknowm _Link_
 ${gaya2} ${prefix}tiktokwm _Link_
 ${gaya2} ${prefix}tiktokmp3 _Link_
-${gaya2} ${prefix}ytmp3 _Link_
-${gaya2} ${prefix}ytmp4 _Link_
+${gaya2} ${prefix}mp3 _Link_  YouTube mp3
+${gaya2} ${prefix}mp4 _Link_  YouTube mp4
 ${gaya2} ${prefix}play _song name_
 ${gaya2} ${prefix}instagram _video link_
 ${gaya2} ${prefix}herodetail _hero name_
