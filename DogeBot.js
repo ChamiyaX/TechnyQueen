@@ -771,7 +771,6 @@ ${gaya2} ${prefix}resetgrouplink`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
-gambar = fs.readFileSync('./media/doged.jpg')
 
 menu =
 `*「 DOWNLOAD MENU 」*
