@@ -1,13 +1,13 @@
 {
     "self": false,
-    "autoread": true,
-    "autoketik": true,
-    "autovn": true,
+    "autoread": false,
+    "autoketik": false,
+    "autovn": false,
     "OwnerNumber": "94767184785",
     "OwnerName": "Chamindu Gimhan",
-    "BotName": "✫𝑻𝒆𝒄𝒉𝒏𝒚 𝑸𝒖𝒆𝒆𝒏✫",
+    "BotName": "𝑻𝒆𝒄𝒉𝒏𝒚 𝑸𝒖𝒆𝒆𝒏",
     "session": "session",
-    "gaya1": "📣",
-    "gaya2": "🔷",
-    "gayawel": "🔶"
+    "gaya1": "💢",
+    "gaya2": "⚙️",
+    "gayawel": "⚙️"
 }
