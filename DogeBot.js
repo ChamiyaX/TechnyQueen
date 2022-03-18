@@ -585,10 +585,10 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                     pemilik = `${owner}@s.whatsapp.net`
                     menu =
                         `*_${ucapanWaktu} @${senderr.split('@')[0]}_*
-                    ❏「 TIME 」
+                    ❏「 TIME 」 \n
                     ${gaya1} *Date* : ${tanggal}
                     ${gaya1} *Time* : ${time}
-                    ❏「 INFO BOT 」
+                    ❏「 INFO BOT 」 \n
                     ${gaya1} *Speed* : ${latensie.toFixed(4)} Second
                     ${gaya1} *Runtime* : ${runtime(process.uptime())}
                     ${gaya1} *Bot Name* : ${botname}
@@ -601,16 +601,16 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                     ${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
                     ${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
                     ${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
-                    ❏「 USER INFO 」
+                    ❏「 USER INFO 」 \n
                     ${gaya1} *Name* : ${pushname}
                     ${gaya1} *Bio* : ${bio_user}
                     ${gaya1} *Number* : @${senderr.split('@')[0]}
                     ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
                     teks =
-                        `_Please Select Button Below_
-                    _If You Are A Mod User_
-                    _Please Type ${prefix}command_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Dream Guy Xeon",body:"Dont forget to subscribe Xeon",previewType:"PHOTO",thumbnail:fs.readFileSync('./media/dogepic1.jpg'),sourceUrl:"https://wa.me/94767184785"}}})
+                        `_Please Select Button Below If You Are A Mod User_
+                    _
+                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
+break
                     break
                 case 'command':
 
