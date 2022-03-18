@@ -1729,9 +1729,7 @@ Please Choose Whether Document, Audio or Video Below`
                     DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `▁ ▂ ▃ ▅ ▆ ▇ █ Techny Queen █ ▇ ▆ ▅ ▃ ▂ ▁ ` })
                     break
                 case 'mp3':
-                    reply(mess.wait)
-                    reply(`*Plz wait 2min....*✌`)
-
+                    reply(mess.wait, "*Plz wait 2min....*")
                     bo = args.join(" ")
                     ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
                     mp3 = await getBuffer(ini.url)
