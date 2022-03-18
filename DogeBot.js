@@ -619,8 +619,9 @@ case 'command':
 
 listMsg = {
 buttonText: 'MENU ',
+
+description: `Hi ${senderr.split('@')[0]}, Please select the menu👇`,
 footerText: `*${botname}*`,
-description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here👇`,
 sections: [
 {
 "title": `${tanggal} - ${time}`,
