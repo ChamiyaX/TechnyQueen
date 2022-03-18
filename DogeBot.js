@@ -601,120 +601,179 @@ module.exports = DogeXeonOP = async(DogeXeonOP, mek, _welkom) => {
                     ${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
                     ${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
                     ${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
-                    ❏「 USER INFO 」 \n
-                    ${gaya1} *Name* : ${pushname}
-                    ${gaya1} *Bio* : ${bio_user}
-                    ${gaya1} *Number* : @${senderr.split('@')[0]}
-                    ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
+                    ❏「 USER INFO 」\n
+${gaya1} *Name* : ${pushname}
+${gaya1} *Bio* : ${bio_user}
+${gaya1} *Number* : @${senderr.split('@')[0]}
+${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
                     teks =
-                        `_Please Select Button Below If You Are A Mod User_
-                    _
-                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
-break
+                        `_Please Select Button Below_If You Are A Mod User_`
+                    DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 }], thumbnail: fs.readFileSync('./media/dogepic1.jpg'), locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
                     break
+                case 'command':
                 case 'command':
 
                     listMsg = {
                         buttonText: 'MENU ',
-                        footerText: `*${botname}*`,
-                        description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
+                        footerText: ` * $ { botname } * `,
+                        description: `
+                    Hi Friend @$ { senderr.split('@')[0] }, Please select the menu here `,
                         sections: [{
-                            "title": `${tanggal} - ${time}`,
+                            "title": `
+                    $ { tanggal } - $ { time }
+                    `,
                             rows: [{
                                     "title": "GROUP MENU",
-                                    "description": `Group වල පාවිච්චි කරන Command 💢`,
-                                    "rowId": `${prefix}grupmenu`
+                                    "description": `
+                    Group වල පාවිච්චි කරන Command💢 `,
+                                    "rowId": `
+                    $ { prefix }
+                    grupmenu `
                                 },
                                 {
                                     "title": "DOWNLOAD MENU",
-                                    "description": `Download කරන්න පාවිච්චි කරන  Command `,
-                                    "rowId": `${prefix}downloadmenu`
+                                    "description": `
+                    Download කරන්න පාවිච්චි කරන Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    downloadmenu `
                                 },
                                 {
                                     "title": "MAKER MENU",
-                                    "description": `Logo වගේ ඒවා හදාගන්න පුලුවන් command `,
-                                    "rowId": `${prefix}makermenu`
+                                    "description": `
+                    Logo වගේ ඒවා හදාගන්න පුලුවන් command `,
+                                    "rowId": `
+                    $ { prefix }
+                    makermenu `
                                 },
                                 {
                                     "title": "GAME MENU",
-                                    "description": `List Of Game Features Command `,
-                                    "rowId": `${prefix}gamemenu`
+                                    "description": `
+                    List Of Game Features Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    gamemenu `
                                 },
                                 {
                                     "title": "RANDOM IMAGE MENU",
-                                    "description": `ist Of Random Photo Command `,
-                                    "rowId": `${prefix}randomimage`
+                                    "description": `
+                    ist Of Random Photo Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    randomimage `
                                 },
                                 {
                                     "title": "RANDOM VIDEO",
-                                    "description": `List Of Random Video Command `,
-                                    "rowId": `${prefix}randomvideo`
+                                    "description": `
+                    List Of Random Video Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    randomvideo `
                                 },
                                 {
                                     "title": "AESTHETIC GIRL MENU",
-                                    "description": `🔞Features`,
-                                    "rowId": `${prefix}asupanmenu`
+                                    "description": `🔞
+                    Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    asupanmenu `
                                 },
                                 {
                                     "title": "RANDOM GIRL MENU",
-                                    "description": `List Of Random Girl Features`,
-                                    "rowId": `${prefix}cecanmenu`
+                                    "description": `
+                    List Of Random Girl Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    cecanmenu `
                                 },
                                 {
                                     "title": "ANIME MENU",
-                                    "description": `List Of Anime Photos Command `,
-                                    "rowId": `${prefix}animemenu`
+                                    "description": `
+                    List Of Anime Photos Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    animemenu `
                                 },
                                 {
                                     "title": "NSFW/HENTAI MENU",
-                                    "description": `🔞 Features`,
-                                    "rowId": `${prefix}nsfwmenu`
+                                    "description": `🔞
+                    Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    nsfwmenu `
                                 },
                                 {
                                     "title": "STICKER MENU",
-                                    "description": `List Of Sticker Features Command `,
-                                    "rowId": `${prefix}stickermenu`
+                                    "description": `
+                    List Of Sticker Features Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    stickermenu `
                                 },
                                 {
                                     "title": "FUN MENU",
-                                    "description": `List Of Fun Features Command `,
-                                    "rowId": `${prefix}funmenu`
+                                    "description": `
+                    List Of Fun Features Command `,
+                                    "rowId": `
+                    $ { prefix }
+                    funmenu `
                                 },
 
                                 {
                                     "title": "OCR MENU",
-                                    "description": `List Of Ocr Features`,
-                                    "rowId": `${prefix}ocrmenu`
+                                    "description": `
+                    List Of Ocr Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    ocrmenu `
                                 },
                                 {
                                     "title": "CONVERTER MENU",
-                                    "description": ` List Of Convert Features`,
-                                    "rowId": `${prefix}convertmenu`
+                                    "description": `
+                    List Of Convert Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    convertmenu `
                                 },
                                 {
                                     "title": "LEVELING MENU",
-                                    "description": `List Of Leveling Features`,
-                                    "rowId": `${prefix}levelingmenu`
+                                    "description": `
+                    List Of Leveling Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    levelingmenu `
                                 },
                                 {
                                     "title": "SEARCH MENU",
-                                    "description": `List Of Searching Features`,
-                                    "rowId": `${prefix}searchmenu`
+                                    "description": `
+                    List Of Searching Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    searchmenu `
                                 },
                                 {
                                     "title": "APK MENU",
-                                    "description": `List Of Apk Features`,
-                                    "rowId": `${prefix}apkmenu`
+                                    "description": `
+                    List Of Apk Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    apkmenu `
                                 },
                                 {
                                     "title": "OTHER MENU",
-                                    "description": `List Of Other Features`,
-                                    "rowId": `${prefix}othermenu`
+                                    "description": `
+                    List Of Other Features `,
+                                    "rowId": `
+                    $ { prefix }
+                    othermenu `
                                 },
                                 {
                                     "title": "OWNER MENU",
-                                    "description": `List Of Owner ගේ මෙනු එක 😂`,
-                                    "rowId": `${prefix}ownermenu`
+                                    "description": `
+                    List Of Owner ගේ මෙනු එක😂 `,
+                                    "rowId": `
+                    $ { prefix }
+                    ownermenu `
                                 }
                             ]
                         }],
@@ -724,719 +783,2006 @@ break
                     break
                 case 'allmenu':
 
-                    reply(`*_Sorry Features ${prefix + command} Not Available Please Type ${prefix}command_*`)
+                    reply(` * _Sorry Features $ { prefix + command }
+                    Not Available Please Type $ { prefix }
+                    command_ * `)
                     break
                 case 'grupmenu':
                 case 'groupmenu':
 
                     menu =
-                        `*「 GROUP MENU 」*
+                        ` * 「GROUP MENU」 *
 
-${gaya2} ${prefix}antilink _on / off_
-${gaya2} ${prefix}antivirtex _on / off_
-${gaya2} ${prefix}welcome _on / off_
-${gaya2} ${prefix}nsfw _on / off_
-${gaya2} ${prefix}group _open / closed_
-${gaya2} ${prefix}promote _@tag / reply_
-${gaya2} ${prefix}demote _@tag / reply_
-${gaya2} ${prefix}add _916xx_
-${gaya2} ${prefix}kick _@tag / reply_
-${gaya2} ${prefix}getdesc
-${gaya2} ${prefix}setpp _reply_
-${gaya2} ${prefix}setdesc _text_
-${gaya2} ${prefix}setname _text_
-${gaya2} ${prefix}getbio _reply target_
-${gaya2} ${prefix}getdp _tag_
-${gaya2} ${prefix}getname _reply target_
-${gaya2} ${prefix}tagall
-${gaya2} ${prefix}hidetag _text_
-${gaya2} ${prefix}contact _916x|Name_
-${gaya2} ${prefix}contag _@tag|Name_
-${gaya2} ${prefix}sticktag _Reply Sticker_
-${gaya2} ${prefix}totag _Reply Image_
-${gaya2} ${prefix}creategroup _Name|tag_
-${gaya2} ${prefix}promoteall
-${gaya2} ${prefix}demoteall
-${gaya2} ${prefix}listadmin
-${gaya2} ${prefix}leave
-${gaya2} ${prefix}grupowner
-${gaya2} ${prefix}groupinfo
-${gaya2} ${prefix}grouplink
-${gaya2} ${prefix}onlinelist
-${gaya2} ${prefix}resetgrouplink`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    antilink _on / off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    antivirtex _on / off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    welcome _on / off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    nsfw _on / off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    group _open / closed_
+                    $ { gaya2 }
+                    $ { prefix }
+                    promote _ @tag / reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    demote _ @tag / reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    add _916xx_
+                    $ { gaya2 }
+                    $ { prefix }
+                    kick _ @tag / reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    getdesc
+                    $ { gaya2 }
+                    $ { prefix }
+                    setpp _reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    setdesc _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    setname _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    getbio _reply target_
+                    $ { gaya2 }
+                    $ { prefix }
+                    getdp _tag_
+                    $ { gaya2 }
+                    $ { prefix }
+                    getname _reply target_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tagall
+                    $ { gaya2 }
+                    $ { prefix }
+                    hidetag _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    contact _916x | Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    contag _ @tag | Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sticktag _Reply Sticker_
+                    $ { gaya2 }
+                    $ { prefix }
+                    totag _Reply Image_
+                    $ { gaya2 }
+                    $ { prefix }
+                    creategroup _Name | tag_
+                    $ { gaya2 }
+                    $ { prefix }
+                    promoteall
+                    $ { gaya2 }
+                    $ { prefix }
+                    demoteall
+                    $ { gaya2 }
+                    $ { prefix }
+                    listadmin
+                    $ { gaya2 }
+                    $ { prefix }
+                    leave
+                    $ { gaya2 }
+                    $ { prefix }
+                    grupowner
+                    $ { gaya2 }
+                    $ { prefix }
+                    groupinfo
+                    $ { gaya2 }
+                    $ { prefix }
+                    grouplink
+                    $ { gaya2 }
+                    $ { prefix }
+                    onlinelist
+                    $ { gaya2 }
+                    $ { prefix }
+                    resetgrouplink `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'downloadmenu':
 
                     menu =
-                        `*「 DOWNLOAD MENU 」*
+                        ` * 「DOWNLOAD MENU」 *
 
-${gaya2} ${prefix}mediafire _Link_
-${gaya2} ${prefix}soundcloud _Link_
-${gaya2} ${prefix}telegramsticker _Link_
-${gaya2} ${prefix}spotify _Link_
-${gaya2} ${prefix}tiktok _Link_
-${gaya2} ${prefix}tiktoknowm _Link_
-${gaya2} ${prefix}tiktokwm _Link_
-${gaya2} ${prefix}tiktokmp3 _Link_
-${gaya2} ${prefix}mp3 _Youtube Link_
-${gaya2} ${prefix}mp4 _Youtube Link_
-${gaya2} ${prefix}play _song name_
-${gaya2} ${prefix}instagram _video link_
-${gaya2} ${prefix}herodetail _hero name_
-${gaya2} ${prefix}herolist
-${gaya2} ${prefix}lyrics _song name_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    mediafire _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    soundcloud _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    telegramsticker _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    spotify _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tiktok _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tiktoknowm _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tiktokwm _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tiktokmp3 _Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    mp3 _Youtube Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    mp4 _Youtube Link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    play _song name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    instagram _video link_
+                    $ { gaya2 }
+                    $ { prefix }
+                    herodetail _hero name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    herolist
+                    $ { gaya2 }
+                    $ { prefix }
+                    lyrics _song name_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'makermenu':
 
                     menu =
-                        `*「 MAKER MENU 」*
+                        ` * 「MAKER MENU」 *
 
-${gaya2} ${prefix}freefire _text_
-${gaya2} ${prefix}silverplaybutton _text_
-${gaya2} ${prefix}goldplaybutton _text_
-${gaya2} ${prefix}blackpink _text_
-${gaya2} ${prefix}halloween _text_
-${gaya2} ${prefix}halloween2 _text_
-${gaya2} ${prefix}3dgradient _text_
-${gaya2} ${prefix}naturalleaves _text_
-${gaya2} ${prefix}dropwater _text_
-${gaya2} ${prefix}blood _text_
-${gaya2} ${prefix}blood2 _text_
-${gaya2} ${prefix}snow _text_
-${gaya2} ${prefix}cloud _text_
-${gaya2} ${prefix}neondevil _text_
-${gaya2} ${prefix}neon _text_
-${gaya2} ${prefix}glowingneonlight _text_
-${gaya2} ${prefix}neonlight _text_
-${gaya2} ${prefix}neonlight2 _text_
-${gaya2} ${prefix}neonlight3 _text_
-${gaya2} ${prefix}greenneon _text_
-${gaya2} ${prefix}toxic _text_
-${gaya2} ${prefix}matrix _text_
-${gaya2} ${prefix}thunder _text_
-${gaya2} ${prefix}thunder2 _text_
-${gaya2} ${prefix}bokeh _text_
-${gaya2} ${prefix}carbontext _text_
-${gaya2} ${prefix}christmas _text_
-${gaya2} ${prefix}breakwall _text_
-${gaya2} ${prefix}roadwarning _text_
-${gaya2} ${prefix}engraved3d _text_
-${gaya2} ${prefix}embossed _text_
-${gaya2} ${prefix}3dstone _text_
-${gaya2} ${prefix}futuristic _text_
-${gaya2} ${prefix}sketch _text_
-${gaya2} ${prefix}bluecircuit _text_
-${gaya2} ${prefix}space _text_
-${gaya2} ${prefix}magmahot _text_
-${gaya2} ${prefix}artpapercut _text_
-${gaya2} ${prefix}3dluxurygold _text_
-${gaya2} ${prefix}robotr2d2 _text_
-${gaya2} ${prefix}harrypotter _text_
-${gaya2} ${prefix}glitch3 _text_
-${gaya2} ${prefix}greenhorror _text_
-${gaya2} ${prefix}horrorgift _text_
-${gaya2} ${prefix}erodedmetal _text_
-${gaya2} ${prefix}3dglowingmetal _text_
-${gaya2} ${prefix}blackmetal _text_
-${gaya2} ${prefix}bluemetal _text_
-${gaya2} ${prefix}shynimetal _text_
-${gaya2} ${prefix}rustymetal _text_
-${gaya2} ${prefix}metalpurple _text_
-${gaya2} ${prefix}metalrainbow _text_
-${gaya2} ${prefix}metaldarkgold _text_
-${gaya2} ${prefix}colorfullluxurymetal _text_
-${gaya2} ${prefix}glossybluemetal _text_
-${gaya2} ${prefix}3dglossymetal _text_
-${gaya2} ${prefix}3ddeepseametal _text_
-${gaya2} ${prefix}leddisplayscreen _text_
-${gaya2} ${prefix}metallic _text_
-${gaya2} ${prefix}glossymetallic _text_
-${gaya2} ${prefix}christmastree _text_
-${gaya2} ${prefix}sparklesmerrychristmas _text_
-${gaya2} ${prefix}countryflag3d _text_
-${gaya2} ${prefix}americanflag3d _text_
-${gaya2} ${prefix}3dscfi _text_
-${gaya2} ${prefix}3drainbow _text_
-${gaya2} ${prefix}3dwaterpipe _text_
-${gaya2} ${prefix}3dchrome _text_
-${gaya2} ${prefix}bluegem _text_
-${gaya2} ${prefix}purplegem _text_
-${gaya2} ${prefix}pinkcandy _text_
-${gaya2} ${prefix}transformer _text_
-${gaya2} ${prefix}berry _text_
-${gaya2} ${prefix}brokenglass _text_
-${gaya2} ${prefix}3drealistic _text_
-${gaya2} ${prefix}3dunderwater _text_
-${gaya2} ${prefix}writeinsandsummerbeach _text_
-${gaya2} ${prefix}sandwriting _text_
-${gaya2} ${prefix}foilballoon _text_
-${gaya2} ${prefix}3dglue _text_
-${gaya2} ${prefix}1917 _text_
-${gaya2} ${prefix}minion _text_
-${gaya2} ${prefix}doubleexposure _text_
-${gaya2} ${prefix}holographic3d _text_
-${gaya2} ${prefix}deluxegold _text_
-${gaya2} ${prefix}deluxesilver _text_
-${gaya2} ${prefix}glossycarbon _text_
-${gaya2} ${prefix}fabric _text_
-${gaya2} ${prefix}xmascards3d _text_
-${gaya2} ${prefix}wicker _text_
-${gaya2} ${prefix}fireworksparkle _text_
-${gaya2} ${prefix}skeleton _text_
-${gaya2} ${prefix}ultragloss _text_
-${gaya2} ${prefix}denim _text_
-${gaya2} ${prefix}decorategreen _text_
-${gaya2} ${prefix}peridot _text_
-${gaya2} ${prefix}rock _text_
-${gaya2} ${prefix}lava _text_
-${gaya2} ${prefix}rainbowequalizer _text_
-${gaya2} ${prefix}purpleglass _text_
-${gaya2} ${prefix}decorativeglass _text_
-${gaya2} ${prefix}chocolatecake _text_
-${gaya2} ${prefix}strawberry _text_
-${gaya2} ${prefix}koifish _text_
-${gaya2} ${prefix}bread _text_
-${gaya2} ${prefix}3dbox _text_
-${gaya2} ${prefix}freeadvancedglow _text_
-${gaya2} ${prefix}honey _text_
-${gaya2} ${prefix}marble _text_
-${gaya2} ${prefix}marbleslabs _text_
-${gaya2} ${prefix}icecold _text_
-${gaya2} ${prefix}fruitjuice _text_
-${gaya2} ${prefix}abstragold _text_
-${gaya2} ${prefix}biscuit _text_
-${gaya2} ${prefix}bagel _text_
-${gaya2} ${prefix}wood _text_
-${gaya2} ${prefix}hexagolden _text_
-${gaya2} ${prefix}wonderfulgraffitiart _text_
-${gaya2} ${prefix}8bit _Text1&Text2_
-${gaya2} ${prefix}pornhub _Text1&Text2_
-${gaya2} ${prefix}glitch _Text1&Text2_
-${gaya2} ${prefix}glitch2 _Text1&Text2_
-${gaya2} ${prefix}layered _Text1&Text2_
-${gaya2} ${prefix}3dsteel _Text1&Text2_
-${gaya2} ${prefix}realistic _Text1&Text2_
-${gaya2} ${prefix}lionlogo _Text1&Text2_
-${gaya2} ${prefix}ninjalogo _Text1&Text2_
-${gaya2} ${prefix}wolf _Text1&Text2_
-${gaya2} ${prefix}wolf2 _Text1&Text2_
-${gaya2} ${prefix}halloween3 _Text1&Text2_
-${gaya2} ${prefix}marvel _Text1&Text2_
-${gaya2} ${prefix}marvel2 _Text1&Text2_
-${gaya2} ${prefix}cinematichorror _Text1&Text2_
-${gaya2} ${prefix}avengers _Text1&Text2_
-${gaya2} ${prefix}graffiti3 _Text1&Text2_
-${gaya2} ${prefix}captainamerica _Text1&Text2_
-${gaya2} ${prefix}girlneko _Text1&Text2_
-${gaya2} ${prefix}sadboy _Text1&Text2_
-${gaya2} ${prefix}makerkaneki _Text1&Text2_
-${gaya2} ${prefix}rem _Text1&Text2_
-${gaya2} ${prefix}lolimaker _Text1&Text2_
-${gaya2} ${prefix}gura _Text1&Text2_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    freefire _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    silverplaybutton _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    goldplaybutton _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    blackpink _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    halloween _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    halloween2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dgradient _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    naturalleaves _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    dropwater _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    blood _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    blood2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    snow _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    cloud _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    neondevil _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    neon _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glowingneonlight _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    neonlight _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    neonlight2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    neonlight3 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    greenneon _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    toxic _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    matrix _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    thunder _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    thunder2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bokeh _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    carbontext _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    christmas _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    breakwall _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    roadwarning _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    engraved3d _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    embossed _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dstone _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    futuristic _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sketch _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bluecircuit _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    space _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    magmahot _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    artpapercut _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dluxurygold _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    robotr2d2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    harrypotter _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glitch3 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    greenhorror _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    horrorgift _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    erodedmetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dglowingmetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    blackmetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bluemetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    shynimetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    rustymetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    metalpurple _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    metalrainbow _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    metaldarkgold _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    colorfullluxurymetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glossybluemetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dglossymetal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 ddeepseametal _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    leddisplayscreen _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    metallic _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glossymetallic _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    christmastree _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sparklesmerrychristmas _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    countryflag3d _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    americanflag3d _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dscfi _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 drainbow _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dwaterpipe _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dchrome _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bluegem _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    purplegem _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    pinkcandy _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    transformer _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    berry _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    brokenglass _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 drealistic _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dunderwater _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    writeinsandsummerbeach _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sandwriting _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    foilballoon _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dglue _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    1917 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    minion _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    doubleexposure _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    holographic3d _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    deluxegold _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    deluxesilver _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glossycarbon _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    fabric _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    xmascards3d _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    wicker _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    fireworksparkle _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    skeleton _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ultragloss _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    denim _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    decorategreen _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    peridot _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    rock _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    lava _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    rainbowequalizer _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    purpleglass _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    decorativeglass _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    chocolatecake _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    strawberry _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    koifish _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bread _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dbox _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    freeadvancedglow _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    honey _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    marble _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    marbleslabs _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    icecold _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    fruitjuice _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    abstragold _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    biscuit _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bagel _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    wood _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    hexagolden _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    wonderfulgraffitiart _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    8 bit _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    pornhub _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glitch _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    glitch2 _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    layered _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    3 dsteel _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    realistic _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    lionlogo _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ninjalogo _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    wolf _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    wolf2 _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    halloween3 _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    marvel _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    marvel2 _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    cinematichorror _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    avengers _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    graffiti3 _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    captainamerica _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    girlneko _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sadboy _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    makerkaneki _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    rem _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    lolimaker _Text1 & Text2_
+                    $ { gaya2 }
+                    $ { prefix }
+                    gura _Text1 & Text2_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'gamemenu':
 
                     menu =
-                        `*「 GAME 」*
+                        ` * 「GAME」 *
 
-${gaya2} ${prefix}truth
-${gaya2} ${prefix}dare`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    truth
+                    $ { gaya2 }
+                    $ { prefix }
+                    dare `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'randomimage':
 
                     menu =
-                        `*「 RANDOM IMAGE MENU 」*
+                        ` * 「RANDOM IMAGE MENU」 *
 
-${gaya2} ${prefix}ppcouple
-${gaya2} ${prefix}meme
-${gaya2} ${prefix}memeindo
-${gaya2} ${prefix}quotesimage
-${gaya2} ${prefix}katakataimage
-${gaya2} ${prefix}renungan
-${gaya2} ${prefix}darkjokesindo
-${gaya2} ${prefix}bts
-${gaya2} ${prefix}exo
-${gaya2} ${prefix}aesthetic
-${gaya2} ${prefix}dog
-${gaya2} ${prefix}cat
-${gaya2} ${prefix}panda
-${gaya2} ${prefix}panda1
-${gaya2} ${prefix}fox
-${gaya2} ${prefix}koala
-${gaya2} ${prefix}bird
-${gaya2} ${prefix}doraemon
-${gaya2} ${prefix}pokemon
-${gaya2} ${prefix}wallpaperhacker
-${gaya2} ${prefix}wallpaperhacker2
-${gaya2} ${prefix}wallpaperharley
-${gaya2} ${prefix}wallpaperjoker
-${gaya2} ${prefix}wallpaperpubg
-${gaya2} ${prefix}wallpaperhp
-${gaya2} ${prefix}wallpaperhp2
-${gaya2} ${prefix}wallpaperkpop
-${gaya2} ${prefix}wallpaperblackpink
-${gaya2} ${prefix}wallpapergame`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    ppcouple
+                    $ { gaya2 }
+                    $ { prefix }
+                    meme
+                    $ { gaya2 }
+                    $ { prefix }
+                    memeindo
+                    $ { gaya2 }
+                    $ { prefix }
+                    quotesimage
+                    $ { gaya2 }
+                    $ { prefix }
+                    katakataimage
+                    $ { gaya2 }
+                    $ { prefix }
+                    renungan
+                    $ { gaya2 }
+                    $ { prefix }
+                    darkjokesindo
+                    $ { gaya2 }
+                    $ { prefix }
+                    bts
+                    $ { gaya2 }
+                    $ { prefix }
+                    exo
+                    $ { gaya2 }
+                    $ { prefix }
+                    aesthetic
+                    $ { gaya2 }
+                    $ { prefix }
+                    dog
+                    $ { gaya2 }
+                    $ { prefix }
+                    cat
+                    $ { gaya2 }
+                    $ { prefix }
+                    panda
+                    $ { gaya2 }
+                    $ { prefix }
+                    panda1
+                    $ { gaya2 }
+                    $ { prefix }
+                    fox
+                    $ { gaya2 }
+                    $ { prefix }
+                    koala
+                    $ { gaya2 }
+                    $ { prefix }
+                    bird
+                    $ { gaya2 }
+                    $ { prefix }
+                    doraemon
+                    $ { gaya2 }
+                    $ { prefix }
+                    pokemon
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperhacker
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperhacker2
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperharley
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperjoker
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperpubg
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperhp
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperhp2
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperkpop
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaperblackpink
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpapergame `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'randomvideo':
 
                     menu =
-                        `*「 RANDOM VIDEO MENU 」*
+                        ` * 「RANDOM VIDEO MENU」 *
 
-${gaya2} ${prefix}beatvn
-${gaya2} ${prefix}jedagjedugff
-${gaya2} ${prefix}jedagjedugml
-${gaya2} ${prefix}jedagjedugpubg
-${gaya2} ${prefix}storywa
-${gaya2} ${prefix}storygalau
-${gaya2} ${prefix}storytruk
-${gaya2} ${prefix}storybus
-${gaya2} ${prefix}storyanime`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}abcde`, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    beatvn
+                    $ { gaya2 }
+                    $ { prefix }
+                    jedagjedugff
+                    $ { gaya2 }
+                    $ { prefix }
+                    jedagjedugml
+                    $ { gaya2 }
+                    $ { prefix }
+                    jedagjedugpubg
+                    $ { gaya2 }
+                    $ { prefix }
+                    storywa
+                    $ { gaya2 }
+                    $ { prefix }
+                    storygalau
+                    $ { gaya2 }
+                    $ { prefix }
+                    storytruk
+                    $ { gaya2 }
+                    $ { prefix }
+                    storybus
+                    $ { gaya2 }
+                    $ { prefix }
+                    storyanime `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    abcde `, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'asupanmenu':
 
                     menu =
-                        `*「 AESTHETIC GIRL MENU」*
+                        ` * 「AESTHETIC GIRL MENU」 *
 
-${gaya2} ${prefix}asupan
-${gaya2} ${prefix}asupanloli
-${gaya2} ${prefix}hijaber
-${gaya2} ${prefix}bocil
-${gaya2} ${prefix}rikagusriani
-${gaya2} ${prefix}santuy
-${gaya2} ${prefix}ukhty
-${gaya2} ${prefix}gheayubi
-${gaya2} ${prefix}nantalia`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    asupan
+                    $ { gaya2 }
+                    $ { prefix }
+                    asupanloli
+                    $ { gaya2 }
+                    $ { prefix }
+                    hijaber
+                    $ { gaya2 }
+                    $ { prefix }
+                    bocil
+                    $ { gaya2 }
+                    $ { prefix }
+                    rikagusriani
+                    $ { gaya2 }
+                    $ { prefix }
+                    santuy
+                    $ { gaya2 }
+                    $ { prefix }
+                    ukhty
+                    $ { gaya2 }
+                    $ { prefix }
+                    gheayubi
+                    $ { gaya2 }
+                    $ { prefix }
+                    nantalia `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'cecanmenu':
 
                     menu =
-                        `*「 RANDOM GIRL MENU  」*
+                        ` * 「RANDOM GIRL MENU」 *
 
-${gaya2} ${prefix}cogan
-${gaya2} ${prefix}cecan
-${gaya2} ${prefix}cecan2
-${gaya2} ${prefix}cogan2
-${gaya2} ${prefix}jeni
-${gaya2} ${prefix}jiso
-${gaya2} ${prefix}justina
-${gaya2} ${prefix}lisa
-${gaya2} ${prefix}rose
-${gaya2} ${prefix}ryujin
-${gaya2} ${prefix}china
-${gaya2} ${prefix}vietnam
-${gaya2} ${prefix}thainlad
-${gaya2} ${prefix}indonesia
-${gaya2} ${prefix}korea
-${gaya2} ${prefix}japan
-${gaya2} ${prefix}malaysia`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    cogan
+                    $ { gaya2 }
+                    $ { prefix }
+                    cecan
+                    $ { gaya2 }
+                    $ { prefix }
+                    cecan2
+                    $ { gaya2 }
+                    $ { prefix }
+                    cogan2
+                    $ { gaya2 }
+                    $ { prefix }
+                    jeni
+                    $ { gaya2 }
+                    $ { prefix }
+                    jiso
+                    $ { gaya2 }
+                    $ { prefix }
+                    justina
+                    $ { gaya2 }
+                    $ { prefix }
+                    lisa
+                    $ { gaya2 }
+                    $ { prefix }
+                    rose
+                    $ { gaya2 }
+                    $ { prefix }
+                    ryujin
+                    $ { gaya2 }
+                    $ { prefix }
+                    china
+                    $ { gaya2 }
+                    $ { prefix }
+                    vietnam
+                    $ { gaya2 }
+                    $ { prefix }
+                    thainlad
+                    $ { gaya2 }
+                    $ { prefix }
+                    indonesia
+                    $ { gaya2 }
+                    $ { prefix }
+                    korea
+                    $ { gaya2 }
+                    $ { prefix }
+                    japan
+                    $ { gaya2 }
+                    $ { prefix }
+                    malaysia `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'animemenu':
 
                     menu =
-                        `*「 ANIME 」*
+                        ` * 「ANIME」 *
 
-${gaya2} ${prefix}elf
-${gaya2} ${prefix}shinobu
-${gaya2} ${prefix}megumin
-${gaya2} ${prefix}wallnime
-${gaya2} ${prefix}sao
-${gaya2} ${prefix}hsdxd
-${gaya2} ${prefix}lovelive
-${gaya2} ${prefix}naruto
-${gaya2} ${prefix}loli
-${gaya2} ${prefix}waifu
-${gaya2} ${prefix}neko
-${gaya2} ${prefix}husbu
-${gaya2} ${prefix}milf
-${gaya2} ${prefix}cosplay
-${gaya2} ${prefix}nekonime
-${gaya2} ${prefix}shota
-${gaya2} ${prefix}wallml
-${gaya2} ${prefix}akira
-${gaya2} ${prefix}akiyama
-${gaya2} ${prefix}ana
-${gaya2} ${prefix}asuna
-${gaya2} ${prefix}ayuzawa
-${gaya2} ${prefix}boruto
-${gaya2} ${prefix}chiho
-${gaya2} ${prefix}chitoge
-${gaya2} ${prefix}deidara
-${gaya2} ${prefix}eba
-${gaya2} ${prefix}elaina
-${gaya2} ${prefix}emilia
-${gaya2} ${prefix}erza
-${gaya2} ${prefix}gremory
-${gaya2} ${prefix}hestia
-${gaya2} ${prefix}hinata
-${gaya2} ${prefix}isuzu
-${gaya2} ${prefix}itachi
-${gaya2} ${prefix}itori
-${gaya2} ${prefix}kagura
-${gaya2} ${prefix}kakasih
-${gaya2} ${prefix}kaori
-${gaya2} ${prefix}kaneki
-${gaya2} ${prefix}kotori
-${gaya2} ${prefix}kurumi
-${gaya2} ${prefix}madara
-${gaya2} ${prefix}mikasa
-${gaya2} ${prefix}miku
-${gaya2} ${prefix}minato
-${gaya2} ${prefix}nezuko
-${gaya2} ${prefix}rize
-${gaya2} ${prefix}sagiri
-${gaya2} ${prefix}sakura
-${gaya2} ${prefix}sasuke
-${gaya2} ${prefix}shina
-${gaya2} ${prefix}shinka
-${gaya2} ${prefix}shinomiya
-${gaya2} ${prefix}shizuka
-${gaya2} ${prefix}tejina
-${gaya2} ${prefix}toukachan
-${gaya2} ${prefix}tsunade
-${gaya2} ${prefix}yotsuba
-${gaya2} ${prefix}yuki
-${gaya2} ${prefix}yumeko
-${gaya2} ${prefix}fanart
-${gaya2} ${prefix}nino`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    elf
+                    $ { gaya2 }
+                    $ { prefix }
+                    shinobu
+                    $ { gaya2 }
+                    $ { prefix }
+                    megumin
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallnime
+                    $ { gaya2 }
+                    $ { prefix }
+                    sao
+                    $ { gaya2 }
+                    $ { prefix }
+                    hsdxd
+                    $ { gaya2 }
+                    $ { prefix }
+                    lovelive
+                    $ { gaya2 }
+                    $ { prefix }
+                    naruto
+                    $ { gaya2 }
+                    $ { prefix }
+                    loli
+                    $ { gaya2 }
+                    $ { prefix }
+                    waifu
+                    $ { gaya2 }
+                    $ { prefix }
+                    neko
+                    $ { gaya2 }
+                    $ { prefix }
+                    husbu
+                    $ { gaya2 }
+                    $ { prefix }
+                    milf
+                    $ { gaya2 }
+                    $ { prefix }
+                    cosplay
+                    $ { gaya2 }
+                    $ { prefix }
+                    nekonime
+                    $ { gaya2 }
+                    $ { prefix }
+                    shota
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallml
+                    $ { gaya2 }
+                    $ { prefix }
+                    akira
+                    $ { gaya2 }
+                    $ { prefix }
+                    akiyama
+                    $ { gaya2 }
+                    $ { prefix }
+                    ana
+                    $ { gaya2 }
+                    $ { prefix }
+                    asuna
+                    $ { gaya2 }
+                    $ { prefix }
+                    ayuzawa
+                    $ { gaya2 }
+                    $ { prefix }
+                    boruto
+                    $ { gaya2 }
+                    $ { prefix }
+                    chiho
+                    $ { gaya2 }
+                    $ { prefix }
+                    chitoge
+                    $ { gaya2 }
+                    $ { prefix }
+                    deidara
+                    $ { gaya2 }
+                    $ { prefix }
+                    eba
+                    $ { gaya2 }
+                    $ { prefix }
+                    elaina
+                    $ { gaya2 }
+                    $ { prefix }
+                    emilia
+                    $ { gaya2 }
+                    $ { prefix }
+                    erza
+                    $ { gaya2 }
+                    $ { prefix }
+                    gremory
+                    $ { gaya2 }
+                    $ { prefix }
+                    hestia
+                    $ { gaya2 }
+                    $ { prefix }
+                    hinata
+                    $ { gaya2 }
+                    $ { prefix }
+                    isuzu
+                    $ { gaya2 }
+                    $ { prefix }
+                    itachi
+                    $ { gaya2 }
+                    $ { prefix }
+                    itori
+                    $ { gaya2 }
+                    $ { prefix }
+                    kagura
+                    $ { gaya2 }
+                    $ { prefix }
+                    kakasih
+                    $ { gaya2 }
+                    $ { prefix }
+                    kaori
+                    $ { gaya2 }
+                    $ { prefix }
+                    kaneki
+                    $ { gaya2 }
+                    $ { prefix }
+                    kotori
+                    $ { gaya2 }
+                    $ { prefix }
+                    kurumi
+                    $ { gaya2 }
+                    $ { prefix }
+                    madara
+                    $ { gaya2 }
+                    $ { prefix }
+                    mikasa
+                    $ { gaya2 }
+                    $ { prefix }
+                    miku
+                    $ { gaya2 }
+                    $ { prefix }
+                    minato
+                    $ { gaya2 }
+                    $ { prefix }
+                    nezuko
+                    $ { gaya2 }
+                    $ { prefix }
+                    rize
+                    $ { gaya2 }
+                    $ { prefix }
+                    sagiri
+                    $ { gaya2 }
+                    $ { prefix }
+                    sakura
+                    $ { gaya2 }
+                    $ { prefix }
+                    sasuke
+                    $ { gaya2 }
+                    $ { prefix }
+                    shina
+                    $ { gaya2 }
+                    $ { prefix }
+                    shinka
+                    $ { gaya2 }
+                    $ { prefix }
+                    shinomiya
+                    $ { gaya2 }
+                    $ { prefix }
+                    shizuka
+                    $ { gaya2 }
+                    $ { prefix }
+                    tejina
+                    $ { gaya2 }
+                    $ { prefix }
+                    toukachan
+                    $ { gaya2 }
+                    $ { prefix }
+                    tsunade
+                    $ { gaya2 }
+                    $ { prefix }
+                    yotsuba
+                    $ { gaya2 }
+                    $ { prefix }
+                    yuki
+                    $ { gaya2 }
+                    $ { prefix }
+                    yumeko
+                    $ { gaya2 }
+                    $ { prefix }
+                    fanart
+                    $ { gaya2 }
+                    $ { prefix }
+                    nino `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'nsfwmenu':
 
                     menu =
-                        `*「 NSFW/HENTAI MENU 」*
+                        ` * 「NSFW / HENTAI MENU」 *
 
-${gaya2} ${prefix}hentaisearch _code_
-${gaya2} ${prefix}animefeets
-${gaya2} ${prefix}chiisaihentai
-${gaya2} ${prefix}yaoi
-${gaya2} ${prefix}bj
-${gaya2} ${prefix}feet
-${gaya2} ${prefix}lewd
-${gaya2} ${prefix}feed
-${gaya2} ${prefix}trap
-${gaya2} ${prefix}eron
-${gaya2} ${prefix}solo
-${gaya2} ${prefix}gasm
-${gaya2} ${prefix}poke
-${gaya2} ${prefix}anal
-${gaya2} ${prefix}holo
-${gaya2} ${prefix}tits
-${gaya2} ${prefix}kuni
-${gaya2} ${prefix}kiss
-${gaya2} ${prefix}erok
-${gaya2} ${prefix}smug
-${gaya2} ${prefix}baka
-${gaya2} ${prefix}solog
-${gaya2} ${prefix}feetg
-${gaya2} ${prefix}lewdk
-${gaya2} ${prefix}cuddle
-${gaya2} ${prefix}cum_jpg
-${gaya2} ${prefix}erofeet
-${gaya2} ${prefix}holoero
-${gaya2} ${prefix}classic
-${gaya2} ${prefix}erokemo
-${gaya2} ${prefix}fox_girl
-${gaya2} ${prefix}futanari
-${gaya2} ${prefix}lewdkemo
-${gaya2} ${prefix}wallpaper
-${gaya2} ${prefix}pussy_jpg
-${gaya2} ${prefix}kemonomimi
-${gaya2} ${prefix}nsfw_avatar
-${gaya2} ${prefix}wallpaper
-${gaya2} ${prefix}eroyuri
-${gaya2} ${prefix}ecchi
-${gaya2} ${prefix}hololewd
-${gaya2} ${prefix}sideoppai
-${gaya2} ${prefix}animefeets
-${gaya2} ${prefix}animebooty
-${gaya2} ${prefix}animearmpits
-${gaya2} ${prefix}hentaifemdom
-${gaya2} ${prefix}lewdanimegirls
-${gaya2} ${prefix}biganimetiddies
-${gaya2} ${prefix}ass
-${gaya2} ${prefix}ahegao
-${gaya2} ${prefix}bdsm
-${gaya2} ${prefix}blowjob
-${gaya2} ${prefix}cuckold
-${gaya2} ${prefix}cum
-${gaya2} ${prefix}ero
-${gaya2} ${prefix}femdom
-${gaya2} ${prefix}foot
-${gaya2} ${prefix}gangbang
-${gaya2} ${prefix}glasses
-${gaya2} ${prefix}hentai
-${gaya2} ${prefix}jahy
-${gaya2} ${prefix}masturbation
-${gaya2} ${prefix}neko
-${gaya2} ${prefix}orgy
-${gaya2} ${prefix}panties
-${gaya2} ${prefix}pussy
-${gaya2} ${prefix}thighs
-${gaya2} ${prefix}yuri
-${gaya2} ${prefix}bokep`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    hentaisearch _code_
+                    $ { gaya2 }
+                    $ { prefix }
+                    animefeets
+                    $ { gaya2 }
+                    $ { prefix }
+                    chiisaihentai
+                    $ { gaya2 }
+                    $ { prefix }
+                    yaoi
+                    $ { gaya2 }
+                    $ { prefix }
+                    bj
+                    $ { gaya2 }
+                    $ { prefix }
+                    feet
+                    $ { gaya2 }
+                    $ { prefix }
+                    lewd
+                    $ { gaya2 }
+                    $ { prefix }
+                    feed
+                    $ { gaya2 }
+                    $ { prefix }
+                    trap
+                    $ { gaya2 }
+                    $ { prefix }
+                    eron
+                    $ { gaya2 }
+                    $ { prefix }
+                    solo
+                    $ { gaya2 }
+                    $ { prefix }
+                    gasm
+                    $ { gaya2 }
+                    $ { prefix }
+                    poke
+                    $ { gaya2 }
+                    $ { prefix }
+                    anal
+                    $ { gaya2 }
+                    $ { prefix }
+                    holo
+                    $ { gaya2 }
+                    $ { prefix }
+                    tits
+                    $ { gaya2 }
+                    $ { prefix }
+                    kuni
+                    $ { gaya2 }
+                    $ { prefix }
+                    kiss
+                    $ { gaya2 }
+                    $ { prefix }
+                    erok
+                    $ { gaya2 }
+                    $ { prefix }
+                    smug
+                    $ { gaya2 }
+                    $ { prefix }
+                    baka
+                    $ { gaya2 }
+                    $ { prefix }
+                    solog
+                    $ { gaya2 }
+                    $ { prefix }
+                    feetg
+                    $ { gaya2 }
+                    $ { prefix }
+                    lewdk
+                    $ { gaya2 }
+                    $ { prefix }
+                    cuddle
+                    $ { gaya2 }
+                    $ { prefix }
+                    cum_jpg
+                    $ { gaya2 }
+                    $ { prefix }
+                    erofeet
+                    $ { gaya2 }
+                    $ { prefix }
+                    holoero
+                    $ { gaya2 }
+                    $ { prefix }
+                    classic
+                    $ { gaya2 }
+                    $ { prefix }
+                    erokemo
+                    $ { gaya2 }
+                    $ { prefix }
+                    fox_girl
+                    $ { gaya2 }
+                    $ { prefix }
+                    futanari
+                    $ { gaya2 }
+                    $ { prefix }
+                    lewdkemo
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaper
+                    $ { gaya2 }
+                    $ { prefix }
+                    pussy_jpg
+                    $ { gaya2 }
+                    $ { prefix }
+                    kemonomimi
+                    $ { gaya2 }
+                    $ { prefix }
+                    nsfw_avatar
+                    $ { gaya2 }
+                    $ { prefix }
+                    wallpaper
+                    $ { gaya2 }
+                    $ { prefix }
+                    eroyuri
+                    $ { gaya2 }
+                    $ { prefix }
+                    ecchi
+                    $ { gaya2 }
+                    $ { prefix }
+                    hololewd
+                    $ { gaya2 }
+                    $ { prefix }
+                    sideoppai
+                    $ { gaya2 }
+                    $ { prefix }
+                    animefeets
+                    $ { gaya2 }
+                    $ { prefix }
+                    animebooty
+                    $ { gaya2 }
+                    $ { prefix }
+                    animearmpits
+                    $ { gaya2 }
+                    $ { prefix }
+                    hentaifemdom
+                    $ { gaya2 }
+                    $ { prefix }
+                    lewdanimegirls
+                    $ { gaya2 }
+                    $ { prefix }
+                    biganimetiddies
+                    $ { gaya2 }
+                    $ { prefix }
+                    ass
+                    $ { gaya2 }
+                    $ { prefix }
+                    ahegao
+                    $ { gaya2 }
+                    $ { prefix }
+                    bdsm
+                    $ { gaya2 }
+                    $ { prefix }
+                    blowjob
+                    $ { gaya2 }
+                    $ { prefix }
+                    cuckold
+                    $ { gaya2 }
+                    $ { prefix }
+                    cum
+                    $ { gaya2 }
+                    $ { prefix }
+                    ero
+                    $ { gaya2 }
+                    $ { prefix }
+                    femdom
+                    $ { gaya2 }
+                    $ { prefix }
+                    foot
+                    $ { gaya2 }
+                    $ { prefix }
+                    gangbang
+                    $ { gaya2 }
+                    $ { prefix }
+                    glasses
+                    $ { gaya2 }
+                    $ { prefix }
+                    hentai
+                    $ { gaya2 }
+                    $ { prefix }
+                    jahy
+                    $ { gaya2 }
+                    $ { prefix }
+                    masturbation
+                    $ { gaya2 }
+                    $ { prefix }
+                    neko
+                    $ { gaya2 }
+                    $ { prefix }
+                    orgy
+                    $ { gaya2 }
+                    $ { prefix }
+                    panties
+                    $ { gaya2 }
+                    $ { prefix }
+                    pussy
+                    $ { gaya2 }
+                    $ { prefix }
+                    thighs
+                    $ { gaya2 }
+                    $ { prefix }
+                    yuri
+                    $ { gaya2 }
+                    $ { prefix }
+                    bokep `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'stickermenu':
 
                     menu =
-                        `*「 STICKER MENU 」*
+                        ` * 「STICKER MENU」 *
 
-${gaya2} ${prefix}stickerwm _Author|Package_
-${gaya2} ${prefix}take _Author|Package_
-${gaya2} ${prefix}sticker _Reply_
-${gaya2} ${prefix}attp _Text_
-${gaya2} ${prefix}ttp _Text_
-${gaya2} ${prefix}ttp2 _Text_
-${gaya2} ${prefix}ttp3 _Text_
-${gaya2} ${prefix}tt4 _Text_
-${gaya2} ${prefix}semoji _Emoji_
-${gaya2} ${prefix}stcmemepic _Up Txt|Down Txt_
-${gaya2} ${prefix}stcmeme _Up Txt|Down Txt_
-${gaya2} ${prefix}memegenerator _Text_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    stickerwm _Author | Package_
+                    $ { gaya2 }
+                    $ { prefix }
+                    take _Author | Package_
+                    $ { gaya2 }
+                    $ { prefix }
+                    sticker _Reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    attp _Text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ttp _Text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ttp2 _Text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ttp3 _Text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tt4 _Text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    semoji _Emoji_
+                    $ { gaya2 }
+                    $ { prefix }
+                    stcmemepic _Up Txt | Down Txt_
+                    $ { gaya2 }
+                    $ { prefix }
+                    stcmeme _Up Txt | Down Txt_
+                    $ { gaya2 }
+                    $ { prefix }
+                    memegenerator _Text_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'funmenu':
 
                     menu =
-                        `*「 FUN MENU 」*
+                        ` * 「FUN MENU」 *
 
-${gaya2} ${prefix}ship _tag/tag_
-${gaya2} ${prefix}rate _reply_
-${gaya2} ${prefix}can _question_
-${gaya2} ${prefix}is _question_
-${gaya2} ${prefix}when _question_
-${gaya2} ${prefix}stupid
-${gaya2} ${prefix}foolish
-${gaya2} ${prefix}smart
-${gaya2} ${prefix}handsome
-${gaya2} ${prefix}beautiful
-${gaya2} ${prefix}gay
-${gaya2} ${prefix}lesbi
-${gaya2} ${prefix}bastard
-${gaya2} ${prefix}stubble
-${gaya2} ${prefix}dog
-${gaya2} ${prefix}fuck
-${gaya2} ${prefix}ugly
-${gaya2} ${prefix}ape
-${gaya2} ${prefix}cute
-${gaya2} ${prefix}noob
-${gaya2} ${prefix}kind
-${gaya2} ${prefix}great
-${gaya2} ${prefix}horny
-${gaya2} ${prefix}wibu
-${gaya2} ${prefix}asshole
-${gaya2} ${prefix}couple
-${gaya2} ${prefix}handsomecheck [tag]
-${gaya2} ${prefix}beautycheck [tag]
-${gaya2} ${prefix}gaycheck [tag]
-${gaya2} ${prefix}lesbiancheck [tag]
-${gaya2} ${prefix}charactercheck [tag]`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    ship _tag / tag_
+                    $ { gaya2 }
+                    $ { prefix }
+                    rate _reply_
+                    $ { gaya2 }
+                    $ { prefix }
+                    can _question_
+                    $ { gaya2 }
+                    $ { prefix }
+                    is _question_
+                    $ { gaya2 }
+                    $ { prefix }
+                    when _question_
+                    $ { gaya2 }
+                    $ { prefix }
+                    stupid
+                    $ { gaya2 }
+                    $ { prefix }
+                    foolish
+                    $ { gaya2 }
+                    $ { prefix }
+                    smart
+                    $ { gaya2 }
+                    $ { prefix }
+                    handsome
+                    $ { gaya2 }
+                    $ { prefix }
+                    beautiful
+                    $ { gaya2 }
+                    $ { prefix }
+                    gay
+                    $ { gaya2 }
+                    $ { prefix }
+                    lesbi
+                    $ { gaya2 }
+                    $ { prefix }
+                    bastard
+                    $ { gaya2 }
+                    $ { prefix }
+                    stubble
+                    $ { gaya2 }
+                    $ { prefix }
+                    dog
+                    $ { gaya2 }
+                    $ { prefix }
+                    fuck
+                    $ { gaya2 }
+                    $ { prefix }
+                    ugly
+                    $ { gaya2 }
+                    $ { prefix }
+                    ape
+                    $ { gaya2 }
+                    $ { prefix }
+                    cute
+                    $ { gaya2 }
+                    $ { prefix }
+                    noob
+                    $ { gaya2 }
+                    $ { prefix }
+                    kind
+                    $ { gaya2 }
+                    $ { prefix }
+                    great
+                    $ { gaya2 }
+                    $ { prefix }
+                    horny
+                    $ { gaya2 }
+                    $ { prefix }
+                    wibu
+                    $ { gaya2 }
+                    $ { prefix }
+                    asshole
+                    $ { gaya2 }
+                    $ { prefix }
+                    couple
+                    $ { gaya2 }
+                    $ { prefix }
+                    handsomecheck[tag]
+                    $ { gaya2 }
+                    $ { prefix }
+                    beautycheck[tag]
+                    $ { gaya2 }
+                    $ { prefix }
+                    gaycheck[tag]
+                    $ { gaya2 }
+                    $ { prefix }
+                    lesbiancheck[tag]
+                    $ { gaya2 }
+                    $ { prefix }
+                    charactercheck[tag]
+                    `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'soundmenu':
 
                     menu =
-                        `*「 SOUND MENU 」*
-${gaya2} ${prefix}sound1
-${gaya2} ${prefix}sound2
-${gaya2} ${prefix}sound3
-${gaya2} ${prefix}sound4
-${gaya2} ${prefix}sound5
-${gaya2} ${prefix}sound6
-${gaya2} ${prefix}sound7
-${gaya2} ${prefix}sound8
-${gaya2} ${prefix}sound9
-${gaya2} ${prefix}sound10
-${gaya2} ${prefix}sound11
-${gaya2} ${prefix}sound12
-${gaya2} ${prefix}sound13
-${gaya2} ${prefix}sound14
-${gaya2} ${prefix}sound15
-${gaya2} ${prefix}sound16
-${gaya2} ${prefix}sound17
-${gaya2} ${prefix}sound18
-${gaya2} ${prefix}sound19
-${gaya2} ${prefix}sound20
-${gaya2} ${prefix}sound21
-${gaya2} ${prefix}sound22
-${gaya2} ${prefix}sound23
-${gaya2} ${prefix}sound24
-${gaya2} ${prefix}sound25
-${gaya2} ${prefix}sound26
-${gaya2} ${prefix}sound27
-${gaya2} ${prefix}sound28
-${gaya2} ${prefix}sound29
-${gaya2} ${prefix}sound30
-${gaya2} ${prefix}sound31
-${gaya2} ${prefix}sound32
-${gaya2} ${prefix}sound33
-${gaya2} ${prefix}sound34
-${gaya2} ${prefix}sound35
-${gaya2} ${prefix}sound36
-${gaya2} ${prefix}sound37
-${gaya2} ${prefix}sound38
-${gaya2} ${prefix}sound39
-${gaya2} ${prefix}sound40
-${gaya2} ${prefix}sound41
-${gaya2} ${prefix}sound42
-${gaya2} ${prefix}sound43
-${gaya2} ${prefix}sound44
-${gaya2} ${prefix}sound45
-${gaya2} ${prefix}sound46
-${gaya2} ${prefix}sound47
-${gaya2} ${prefix}sound48
-${gaya2} ${prefix}sound49
-${gaya2} ${prefix}sound50
-${gaya2} ${prefix}sound51
-${gaya2} ${prefix}sound52
-${gaya2} ${prefix}sound53
-${gaya2} ${prefix}sound54
-${gaya2} ${prefix}sound55
-${gaya2} ${prefix}sound56
-${gaya2} ${prefix}sound57
-${gaya2} ${prefix}sound58
-${gaya2} ${prefix}sound59
-${gaya2} ${prefix}sound60
-${gaya2} ${prefix}sound61
-${gaya2} ${prefix}sound62
-${gaya2} ${prefix}sound63
-${gaya2} ${prefix}sound64
-${gaya2} ${prefix}sound65
-${gaya2} ${prefix}sound66
-${gaya2} ${prefix}sound67
-${gaya2} ${prefix}sound68
-${gaya2} ${prefix}sound69
-${gaya2} ${prefix}sound70
-${gaya2} ${prefix}sound71
-${gaya2} ${prefix}sound72
-${gaya2} ${prefix}sound73
-${gaya2} ${prefix}sound74`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        ` * 「SOUND MENU」 *
+                        $ { gaya2 }
+                    $ { prefix }
+                    sound1
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound2
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound3
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound4
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound5
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound6
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound7
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound8
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound9
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound10
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound11
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound12
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound13
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound14
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound15
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound16
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound17
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound18
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound19
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound20
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound21
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound22
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound23
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound24
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound25
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound26
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound27
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound28
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound29
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound30
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound31
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound32
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound33
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound34
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound35
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound36
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound37
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound38
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound39
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound40
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound41
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound42
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound43
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound44
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound45
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound46
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound47
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound48
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound49
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound50
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound51
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound52
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound53
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound54
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound55
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound56
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound57
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound58
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound59
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound60
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound61
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound62
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound63
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound64
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound65
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound66
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound67
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound68
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound69
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound70
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound71
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound72
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound73
+                    $ { gaya2 }
+                    $ { prefix }
+                    sound74 `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'ocrmenu':
 
                     menu =
-                        `*「 OCR MENU 」*
+                        ` * 「OCR MENU」 *
 
-${gaya2} ${prefix}ninjaname _Name_
-${gaya2} ${prefix}stylishcoolname
-${gaya2} ${prefix}ssweb _URL_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    ninjaname _Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    stylishcoolname
+                    $ { gaya2 }
+                    $ { prefix }
+                    ssweb _URL_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'convertmenu':
 
                     menu =
-                        `*「 CONVERT MENU 」*
+                        ` * 「CONVERT MENU」 *
 
-${gaya2} ${prefix}cutesound _reply audio/vn_
-${gaya2} ${prefix}blub _reply audio/vn_
-${gaya2} ${prefix}ghost _reply audio/vn_
-${gaya2} ${prefix}squirrel _reply audio/vn_
-${gaya2} ${prefix}slow _reply audio/vn_
-${gaya2} ${prefix}fast _reply audio/vn_
-${gaya2} ${prefix}vibra _reply audio/vn_
-${gaya2} ${prefix}nightcore _reply audio/vn_
-${gaya2} ${prefix}bass _reply audio/vn_
-${gaya2} ${prefix}robot _reply audio/vn_
-${gaya2} ${prefix}reverse _reply audio/vn_
-${gaya2} ${prefix}fat _reply audio/vn_
-${gaya2} ${prefix}vnsec _reply audio with number_
-${gaya2} ${prefix}vidsec _reply video with number_
-${gaya2} ${prefix}tomp3 _reply video_
-${gaya2} ${prefix}toimg _reply sticker_
-${gaya2} ${prefix}tourl _reply image/vid_
-${gaya2} ${prefix}tts _code text_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    cutesound _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    blub _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ghost _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    squirrel _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    slow _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    fast _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    vibra _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    nightcore _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bass _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    robot _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    reverse _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    fat _reply audio / vn_
+                    $ { gaya2 }
+                    $ { prefix }
+                    vnsec _reply audio with number_
+                    $ { gaya2 }
+                    $ { prefix }
+                    vidsec _reply video with number_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tomp3 _reply video_
+                    $ { gaya2 }
+                    $ { prefix }
+                    toimg _reply sticker_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tourl _reply image / vid_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tts _code text_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'levelingmenu':
 
                     menu =
-                        `*「 LEVELING MENU 」*
+                        ` * 「LEVELING MENU」 *
 
-${gaya2} ${prefix}profile
-${gaya2} ${prefix}level`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    profile
+                    $ { gaya2 }
+                    $ { prefix }
+                    level `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'searchmenu':
 
                     menu =
-                        `*「 SEARCH MENU 」*
+                        ` * 「SEARCH MENU」 *
 
-${gaya2} ${prefix}playstore _Query_
-${gaya2} ${prefix}ytsearch _Query_
-${gaya2} ${prefix}pinterest _Query_
-${gaya2} ${prefix}googleimg _Query_
-${gaya2} ${prefix}google _Query_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    playstore _Query_
+                    $ { gaya2 }
+                    $ { prefix }
+                    ytsearch _Query_
+                    $ { gaya2 }
+                    $ { prefix }
+                    pinterest _Query_
+                    $ { gaya2 }
+                    $ { prefix }
+                    googleimg _Query_
+                    $ { gaya2 }
+                    $ { prefix }
+                    google _Query_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'apkmenu':
 
                     menu =
-                        `*「 APK MENU 」*
+                        ` * 「APK MENU」 *
 
-${gaya2} ${prefix}apkdone _Apk Name_
-${gaya2} ${prefix}apkgoogle _Apk Name_
-${gaya2} ${prefix}hostapk _Apk Name_
-${gaya2} ${prefix}revdl _Apk Name_
-${gaya2} ${prefix}toraccino _Apk Name_
-${gaya2} ${prefix}uapkpro _Apk Name_
-${gaya2} ${prefix}apkmody _Apk Name_
-${gaya2} ${prefix}apkshub _Apk Name_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    apkdone _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    apkgoogle _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    hostapk _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    revdl _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    toraccino _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    uapkpro _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    apkmody _Apk Name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    apkshub _Apk Name_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'othermenu':
 
                     menu =
-                        `*「 OTHER MENU 」*
+                        ` * 「OTHER MENU」 *
 
-${gaya2} ${prefix}runtime
-${gaya2} ${prefix}speed
-${gaya2} ${prefix}rentbot
-${gaya2} ${prefix}payment
-${gaya2} ${prefix}owner
-${gaya2} ${prefix}developer
-${gaya2} ${prefix}script
-${gaya2} ${prefix}delete _Reply to bot messages_`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    runtime
+                    $ { gaya2 }
+                    $ { prefix }
+                    speed
+                    $ { gaya2 }
+                    $ { prefix }
+                    rentbot
+                    $ { gaya2 }
+                    $ { prefix }
+                    payment
+                    $ { gaya2 }
+                    $ { prefix }
+                    owner
+                    $ { gaya2 }
+                    $ { prefix }
+                    developer
+                    $ { gaya2 }
+                    $ { prefix }
+                    script
+                    $ { gaya2 }
+                    $ { prefix }
+                    delete _Reply to bot messages_ `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'ownermenu':
 
                     menu =
-                        `*「 OWNER MENU 」*
+                        ` * 「OWNER MENU」 *
 
-${gaya2} ${prefix}spam _text|amount_
-${gaya2} ${prefix}tospam _reply with amount_
-${gaya2} ${prefix}bc _text_
-${gaya2} ${prefix}bc2 _text_
-${gaya2} ${prefix}bcgc _text_
-${gaya2} ${prefix}setbotname _text_
-${gaya2} ${prefix}setbotbio _text_
-${gaya2} ${prefix}setbotpp _Reply Image_
-${gaya2} ${prefix}autoread _On / Off_
-${gaya2} ${prefix}autotype _On / Off_
-${gaya2} ${prefix}autorecord _On / Off_
-${gaya2} ${prefix}addvn _Reply audio with caption_
-${gaya2} ${prefix}delvn _vn name_
-${gaya2} ${prefix}listvn
-${gaya2} ${prefix}addsticker _Reply sticker with caption_
-${gaya2} ${prefix}delsticker _sticker name_
-${gaya2} ${prefix}liststicker
-${gaya2} ${prefix}addimage _Reply image with caption_
-${gaya2} ${prefix}delimage_image name_
-${gaya2} ${prefix}listimage
-${gaya2} ${prefix}clearall
-${gaya2} ${prefix}leaveall
-${gaya2} ${prefix}public
-${gaya2} ${prefix}self`
-                    DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
+                        $ { gaya2 }
+                    $ { prefix }
+                    spam _text | amount_
+                    $ { gaya2 }
+                    $ { prefix }
+                    tospam _reply with amount_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bc _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bc2 _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    bcgc _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    setbotname _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    setbotbio _text_
+                    $ { gaya2 }
+                    $ { prefix }
+                    setbotpp _Reply Image_
+                    $ { gaya2 }
+                    $ { prefix }
+                    autoread _On / Off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    autotype _On / Off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    autorecord _On / Off_
+                    $ { gaya2 }
+                    $ { prefix }
+                    addvn _Reply audio with caption_
+                    $ { gaya2 }
+                    $ { prefix }
+                    delvn _vn name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    listvn
+                    $ { gaya2 }
+                    $ { prefix }
+                    addsticker _Reply sticker with caption_
+                    $ { gaya2 }
+                    $ { prefix }
+                    delsticker _sticker name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    liststicker
+                    $ { gaya2 }
+                    $ { prefix }
+                    addimage _Reply image with caption_
+                    $ { gaya2 }
+                    $ { prefix }
+                    delimage_image name_
+                    $ { gaya2 }
+                    $ { prefix }
+                    listimage
+                    $ { gaya2 }
+                    $ { prefix }
+                    clearall
+                    $ { gaya2 }
+                    $ { prefix }
+                    leaveall
+                    $ { gaya2 }
+                    $ { prefix }
+                    public
+                    $ { gaya2 }
+                    $ { prefix }
+                    self `
+                    DogeXeonOP.sendMessage(from, { contentText: `
+                    $ { menu }
+                    `, footerText: ` * _$ { tanggal }
+                    _ * `, buttons: [{ buttonId: `
+                    $ { prefix }
+                    command `, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }, { buttonId: `
+                    $ { prefix }
+                    owner `, buttonText: { displayText: 'OWNER 👤' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [sender] } } }, 'buttonsMessage')
                     break
                 case 'abcde':
 
@@ -1447,9 +2793,10 @@ ${gaya2} ${prefix}self`
 
                 case 'rentbot':
                     menu =
-                        `*${ucapanWaktu} @${senderr.split('@')[0]}*
+                        ` * $ { ucapanWaktu }
+                    @$ { senderr.split('@')[0] } *
 
-\`\`\`OPEN FOR RENT :\`\`\`
+                    \`\`\`OPEN FOR RENT :\`\`\`
 ➪ *1 Week :* Free🤟
 ➪ *1 Month :* Free🤟
 ➪ *Permanent :* Free🤟
