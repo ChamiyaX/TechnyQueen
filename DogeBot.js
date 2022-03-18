@@ -1719,15 +1719,15 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🔸` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `your video✅` })
 break
 case 'mp3':
 reply(mess.wait)
-reply('plz wait 2 minutes...🎧')
+reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'voice', ptt: true, quoted: mek})
+DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp3', ptt: true, quoted: mek})
 break
 case 'ytmp3':
 
@@ -1745,7 +1745,7 @@ url = args.join(' ')
 anump4 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp4?url=${url}&apikey=${dhakey}`)
 ytmp4 = await getBuffer(anump4.result.url)
 reply(`_The video is being processed, please wait a few more moments_`)
-DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✓`, thumbnail:Buffer.alloc(0), quoted:mek})
+DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✅`, thumbnail:Buffer.alloc(0), quoted:mek})
 break
 
 //══════════[ INTAKE FEATURES ]══════════//
