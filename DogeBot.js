@@ -606,8 +606,7 @@ ${gaya1} *Name* : ${pushname}
 ${gaya1} *Bio* : ${bio_user}
 ${gaya1} *Number* : @${senderr.split('@')[0]}
 ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
-                    teks =
-                        `_Please Select Button Below_If You Are A Mod User_`
+                    teks = `_Please Select Button Below If You Are A Mod User_`
                     DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU ' }, type: 1 }, { buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 }, { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER ' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: { mentionedJid: [senderr, pemilik] } } }, 'buttonsMessage')
                     break
                 case 'command':
@@ -616,8 +615,7 @@ ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
                     listMsg = {
                         buttonText: 'MENU ',
                         footerText: ` * $ { botname } * `,
-                        description: `
-                    Hi Friend @$ { senderr.split('@')[0] }, Please select the menu here `,
+                        description: `Hi Friend @$ { senderr.split('@')[0] }, Please select the menu here `,
                         sections: [{
                             "title": `
                     $ { tanggal } - $ { time }
