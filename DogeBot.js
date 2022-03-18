@@ -1469,8 +1469,7 @@ case 'payment':
 gambar = fs.readFileSync('./media/doged.jpg')
 menunya = `*「 PAYMENT 」*
 
-• Note: Talk to the owner before payment
-• FamPay : _Please scan the qr above_`
+• Note: Talk to the owner`
 but = [
 { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU ' }, type: 1 },
 { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER ' }, type: 1 }
@@ -2858,7 +2857,7 @@ case 'script':
 case 'sourcode':
 
 scpic = fs.readFileSync('./media/scpic.jpg')
-scsell = `*Techny Queen  Bot V2 Script *\n\n• 𝑮𝒊𝒕𝑯𝒖𝒃: https://github.com/ChamiyaX_\n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
+scsell = `*Techny Queen Bot V2 Script* \n\n• GitHub: https://github.com/ChamiyaX \n• website: https://chamiyapage.netlify.app/ \n\n_𝙄𝙛 𝙮𝙤𝙪 𝙬𝙞𝙨𝙝 𝙩𝙤 𝙗𝙪𝙮 𝙪𝙣𝙚𝙣𝙘𝙧𝙮𝙥𝙩𝙚𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 𝙘𝙡𝙞𝙘𝙠 𝙤𝙣 𝙩𝙝𝙚 𝙗𝙪𝙮 𝙨𝙘𝙧𝙞𝙥𝙩 𝙗𝙪𝙩𝙩𝙤𝙣 𝙗𝙚𝙡𝙤𝙬._`
 but = [
 { buttonId: `${prefix}rentbot`, buttonText: { displayText: 'BUY SCRIPT ' }, type: 1 },
 { buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER ' }, type: 1 }
