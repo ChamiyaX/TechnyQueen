@@ -1744,7 +1744,7 @@ case 'ytmp4':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
-anump4 = await fetchJson(`https://vikoapi-index.herokuapp.com/api/ytmp4?url=${url}&apikey=${dhakey}`)
+anump4 = await fetchJson(`https://vikoapi-index.herokuapp.com/api/ytmp4?url=${url}&apikey=btvX3FCd`)
 ytmp4 = await getBuffer(anump4.result.url)
 reply(`_The video is being processed, please wait a few more moments_`)
 DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✅`, thumbnail:Buffer.alloc(0), quoted:mek})
