@@ -3478,7 +3478,7 @@ case 'ttp4':
 				case 'ttp':  
 				case 'attp':
             
-					if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp DogeBot`)
+					if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp TQ`)
 					atetepe12 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					DogeXeonOP.sendMessage(from, atetepe12, sticker, { quoted: mek })
 					break
