@@ -1707,7 +1707,7 @@ break
 if (args.length ==0)return reply('Whats the title of the song?')
 bo = args.join(" ")
 reply(mess.wait)
-ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytplay?query=${bo}&apikey=KingOfBear`)
+ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=KingOfBear`)
 thmb = await getBuffer(ini.thumb)
 ply1 =`*Title:* ${ini.title}\n*Channel:* ${ini.channel}\n*View:* ${ini.views}\n*Publish Time:* ${ini.published}`
 ply2 =`Please Select Media Below`
@@ -1727,6 +1727,7 @@ break
 
 case 'mp3':
 reply(mess.wait)
+reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
@@ -3359,6 +3360,7 @@ case 'bass':
 					DogeXeonOP.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply to the video')
 					reply(mess.wait)
+				    reply('*plz wait 2 minutes...*🎧')
 					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					mediad = await DogeXeonOP.downloadAndSaveMediaMessage(encmediad)
 					ran = getRandom('.mp4')
