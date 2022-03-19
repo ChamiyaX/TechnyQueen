@@ -1719,7 +1719,7 @@ break
 case 'mp4':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp4?query=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp4?url=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `your video✅` })
 break
@@ -1727,7 +1727,7 @@ case 'mp3':
 reply(mess.wait)
 reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
-ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp3?query=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`ttps://login-apikeybear.herokuapp.com/api/ytmp3?url=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp3, audio, { quoted: mek})
 break
@@ -1744,7 +1744,7 @@ case 'ytmp4':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
-anump4 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp4?url=${url}&apikey=${dhakey}`)
+anump4 = await fetchJson(`ttps://login-apikeybear.herokuapp.com/api/ytmp3?url=${url}&apikey=${dhakey}`)
 ytmp4 = await getBuffer(anump4.result.url)
 reply(`_The video is being processed, please wait a few more moments_`)
 DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✅`, thumbnail:Buffer.alloc(0), quoted:mek})
@@ -2177,7 +2177,7 @@ break
 //----> NSFW FEATURES <----//
 
 case 'hentaisearch': case 'nhentai':{
-	if (!isGroup) return reply('  *තවත් වලත්තයෙක් හම්බුනා* 😂🤛 /n Its better to just be in the *group* so that everyone will be sinned ')
+	if (!isGroup) return reply('  *තවත් වලත්තයෙක් හම්බුනා* 😂🤛 \n Its better to just be in the *group* so that everyone will be sinned ')
 if (!isNsfw) return reply(mess.only.nsfw)
     if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
     henid = args[0]
@@ -2219,7 +2219,7 @@ case 'pussy':
 case 'thighs':
 case 'yuri':
 
-if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 /n Its better to just be in the *group* so that everyone will be sinned ')
+if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 \n Its better to just be in the *group* so that everyone will be sinned ')
 if (!isNsfw) return reply(mess.only.nsfw)
 anu23 = await fetchJson(`https://apidhani.herokuapp.com/api/nsfw/${command}?apikey=${dhakey}`)
 buffer = await getBuffer(anu23.result)
@@ -2235,7 +2235,7 @@ type: 1,
 ]);
 break
 					case 'bokep':
-					if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 /n Its better to just be in the *group* so that everyone will be sinned ')
+					if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 \n Its better to just be in the *group* so that everyone will be sinned ')
 if (!isNsfw) return reply(mess.only.nsfw)
 reply(mess.wait)
 get_result = await getBuffer(`${porn1}/api/bokep?apikey=RakuKeyTod`)
@@ -2265,7 +2265,7 @@ break
                 case 'biganimetiddies':
                 case 'animebellybutton':
                 case 'hentai4everyone':
-                if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 /n Its better to just be in the *group* so that everyone will be sinned ')
+                if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 \n Its better to just be in the *group* so that everyone will be sinned ')
 if (!isNsfw) return reply(mess.only.nsfw)
                 reply(mess.wait)
                     await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${Lolhuman}`).then((gambar) => {
@@ -2306,7 +2306,7 @@ if (!isNsfw) return reply(mess.only.nsfw)
                 case 'pussy_jpg':
                 case 'kemonomimi':
                 case 'nsfw_avatar':
-                if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 /n Its better to just be in the *group* so that everyone will be sinned ')
+                if (!isGroup) return reply('*තවත් වලත්තයෙක් හම්බුනා* 😂🤛 \n Its better to just be in the *group* so that everyone will be sinned ')
 if (!isNsfw) return reply(mess.only.nsfw)
                 reply(mess.wait)
                     getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
