@@ -2641,7 +2641,7 @@ reply(mess.wait)
 
 
 
-anumvl = await fetchJson(`https://api.xteam.xyz/textpro/marvelstudios?&text=${F1}&text2=${F2}&apikey=${dhakey}`)
+anumvl = await fetchJson(`https://api.xteam.xyz/textpro/marvelstudios?&text=${F1}&text2=${F2}&APIKEY=${dhakey}`)
 pornhub = await getBuffer(anumvl.result)
 DogeXeonOP.sendMessage(from, pornhub, image, {caption: `*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️`, quoted: mek})
 break
