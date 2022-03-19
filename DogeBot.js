@@ -1720,58 +1720,22 @@ break
 case 'mp4':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp4?url=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `your video✅` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🐶` })
 break
 case 'mp3':
 reply(mess.wait)
-reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
-ini = await fetchJson(`ttps://login-apikeybear.herokuapp.com/api/ytmp3?url=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp3, audio, { quoted: mek})
+DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek})
 break
 
 
-case 'ytmp3': {
-if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
-			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
-			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
-			var mulaikah = args.join(' ')
-			await reply(lang.wait())
-                zee.Youtube(mulaikah).then(async (data) => {
-                    let txt = `*----「 YOUTUBE AUDIO 」----*\n\n`
-                    txt += `*• Quality :* ${data.medias[7].quality}\n`
-                    txt += `*• Type :* ${data.medias[7].extension}\n`
-                    txt += `*• Size :* ${data.medias[7].formattedSize}\n`
-                    txt += `*• Url Source :* ${data.url}\n\n`
-                    txt += `_Mohon tunggu sebentar , uploading media..._`
-                    sendFileFromUrl(from, data.thumbnail, txt, mek)
-                    sendFileFromUrl(from, data.medias[7].url, '', mek)
-                })
-                }
-             break
-case 'ytmp4': {
-if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
-			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
-			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
-			var mulaikah = args.join(' ')
-			zee.Youtube(mulaikah).then(async (data) => {
-                    let txt = `*----「 YOUTUBE VIDEO 」----*\n\n`
-                    txt += `*• Quality :* ${data.medias[1].quality}\n`
-                    txt += `*• Type :* ${data.medias[1].extension}\n`
-                    txt += `*• Size :* ${data.medias[1].formattedSize}\n`
-                    txt += `*• Url Source :* ${data.url}\n\n`
-                    txt += `_Mohon tunggu sebentar , uploading media..._`
-                    sendFileFromUrl(from, data.thumbnail, txt, mek)
-                    sendFileFromUrl(from, data.medias[1].url, '', mek)                    
-                })
-                }
-             break  
 
 
-case 'ytmp31':
+case 'ytmp3':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
@@ -1780,7 +1744,7 @@ ytmp3 = await getBuffer(anump3.result.url)
 reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
-case 'ytmp41':
+case 'ytmp4':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
