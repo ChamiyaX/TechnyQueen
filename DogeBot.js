@@ -2484,7 +2484,7 @@ teks = args.join(" ")
 reply(mess.wait)
 
 
-anuapidhani = await fetchJson(`https://zenzapi.xyz/textpro/${command}?text=${teks}&apikey=164a22e810`)
+anuapidhani = await fetchJson(`https://zenzapi.xyz/api/textpro/${command}?text=${teks}&apikey=164a22e810`)
 oke = await getBuffer(anuapidhani.result)
 DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️'})
 break
