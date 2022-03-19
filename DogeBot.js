@@ -1735,7 +1735,7 @@ case 'ytmp3':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
-anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
+anump3 = await fetchJson(`https://vikoapi-index.herokuapp.com/api/ytmp3?url=${url}&apikey=${dhakey}`)
 ytmp3 = await getBuffer(anump3.result.url)
 reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
@@ -1744,7 +1744,7 @@ case 'ytmp4':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
-anump4 = await fetchJson(`ttps://login-apikeybear.herokuapp.com/api/ytmp3?url=${url}&apikey=${dhakey}`)
+anump4 = await fetchJson(`https://vikoapi-index.herokuapp.com/api/ytmp4?url=${url}&apikey=${dhakey}`)
 ytmp4 = await getBuffer(anump4.result.url)
 reply(`_The video is being processed, please wait a few more moments_`)
 DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✅`, thumbnail:Buffer.alloc(0), quoted:mek})
