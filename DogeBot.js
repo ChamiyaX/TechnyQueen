@@ -1706,7 +1706,7 @@ break
 if (args.length ==0)return reply('Whats the title of the song?')
 bo = args.join(" ")
 reply(mess.wait)
-ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=KingOfBear`)
+ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytplay?query=${bo}&apikey=KingOfBear`)
 thmb = await getBuffer(ini.thumb)
 ply1 =`*Title:* ${ini.title}\n*Channel:* ${ini.channel}\n*View:* ${ini.views}\n*Publish Time:* ${ini.published}`
 ply2 =`Please Select Media Below`
@@ -1719,7 +1719,7 @@ break
 case 'mp4':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `your video✅` })
 break
@@ -1727,7 +1727,7 @@ case 'mp3':
 reply(mess.wait)
 reply('*plz wait 2 minutes...*🎧')
 bo = args.join(" ")
-ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
+ini = await fetchJson(`https://login-apikeybear.herokuapp.com/api/ytmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp3, audio, { quoted: mek})
 break
