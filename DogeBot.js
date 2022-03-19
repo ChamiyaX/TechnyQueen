@@ -2483,7 +2483,6 @@ if (args.length < 1) return reply(`*Where is the text?*\n_Example : ${prefix + c
 teks = args.join(" ")
 reply(mess.wait)
 
-https://zenzapi.xyz/textpro/space?text=&apikey=164a22e810
 
 anuapidhani = await fetchJson(`https://zenzapi.xyz/textpro/${command}?text=${teks}&apikey=164a22e810`)
 oke = await getBuffer(anuapidhani.result)
