@@ -57,7 +57,7 @@ const { pinterest } = require('./lib/pinterest')
 const { uploadimg, upload } = require('./lib/uploadimg')
 const { uploadImages } = require('./lib/uploadimage')
 const { mediafireDl } = require('./lib/mediafire.js')
-const { yta, ytv} = require('../lib/y2mate')
+
 
 //══════════[ Leveling and Rpg ]══════════//
 
