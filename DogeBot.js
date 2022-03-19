@@ -2074,12 +2074,12 @@ break
                 case 'shinobu':
                 case 'megumin':
                 case 'wallnime':
-                                case 'art':
+                case 'art':
                 reply(mess.wait)
-                    getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
-                        DogeXeonOP.sendMessage(from, gambar, image, { quoted: mek })
-                    })
-                    break
+                getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
+                DogeXeonOP.sendMessage(from, gambar, image, { quoted: mek })
+                })
+                break
 case 'waifu':
 case 'neko':
 case 'naruto':
@@ -2482,6 +2482,8 @@ case 'wonderfulgraffitiart':
 if (args.length < 1) return reply(`*Where is the text?*\n_Example : ${prefix + command} your name_`) 
 teks = args.join(" ")
 reply(mess.wait)
+
+
 anuapidhani = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/${command}?apikey=${dhakey}&text=${teks}`)
 oke = await getBuffer(anuapidhani.result)
 DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️'})
@@ -2636,7 +2638,10 @@ var F = body.slice(7)
 var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
-anumvl = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/marvelstudio?apikey=${dhakey}&text1=${F1}&text2=${F2}`)
+
+
+
+anumvl = await fetchJson(`https://api.xteam.xyz/textpro/marvelstudios?&text=${F1}&text2=${F2}&apikey=${dhakey}`)
 pornhub = await getBuffer(anumvl.result)
 DogeXeonOP.sendMessage(from, pornhub, image, {caption: `*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️`, quoted: mek})
 break
