@@ -2484,7 +2484,7 @@ teks = args.join(" ")
 reply(mess.wait)
 
 
-anuapidhani = await fetchJson(`https://zenzapi.xyz/api/textpro/${command}?text=${teks}&apikey=164a22e810`)
+anuapidhani = await fetchJson(`https://zenzapi.xyz/textpro/${command}?text=${teks}&apikey=164a22e810`)
 oke = await getBuffer(anuapidhani.result)
 DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️'})
 break
@@ -3478,7 +3478,7 @@ case 'ttp4':
 				case 'ttp':  
 				case 'attp':
             
-					if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp TQ bot`)
+					if (!c) return reply(`Where is the text bro?\nExample :\n${prefix}attp DogeBot`)
 					atetepe12 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					DogeXeonOP.sendMessage(from, atetepe12, sticker, { quoted: mek })
 					break
@@ -3503,7 +3503,7 @@ case 'memegenerator': case 'memegen':{
 										}
 									break
  	case 'stickermeme': case 'memesticker': case 'memestick': case 'stickmeme': case 'stcmeme': case 'smeme':{
-						if (args.length < 1) return reply(`Send orders *${prefix + command}* TQ bot`)
+						if (args.length < 1) return reply(`Send orders *${prefix + command}* DogeBot`)
 									if (q.includes('|')) return reply(`Reply to an image with a caption, For Example *${prefix + command}* Xeon`)
 									try {
 										if (!isQuotedImage) return reply(`Reply to an image!`)
