@@ -2483,8 +2483,9 @@ if (args.length < 1) return reply(`*Where is the text?*\n_Example : ${prefix + c
 teks = args.join(" ")
 reply(mess.wait)
 
+https://zenzapi.xyz/textpro/space?text=&apikey=164a22e810
 
-anuapidhani = await fetchJson(`https://apidhani.herokuapp.com/api/textpro/${command}?apikey=${dhakey}&text=${teks}`)
+anuapidhani = await fetchJson(`https://zenzapi.xyz/textpro/${command}?text=${teks}&apikey=164a22e810`)
 oke = await getBuffer(anuapidhani.result)
 DogeXeonOP.sendMessage(from, oke, image, {quoted: mek, caption: '*ᵍᵉⁿᵉʳᵃᵗᵉᵈ ᵇʸ ᵗᵠ ᵇᵒᵗ* ✔️'})
 break
@@ -2639,7 +2640,7 @@ var F1 = F.split("&")[0];
 var F2 = F.split("&")[1]; 
 reply(mess.wait)
 
-
+https://api.xteam.xyz/textpro/marvelstudios?text=Xteam&text2=Api&APIKEY=5448c721eb96f100
 
 anumvl = await fetchJson(`https://api.xteam.xyz/textpro/marvelstudios?&text=${F1}&text2=${F2}&APIKEY=${dhakey}`)
 pornhub = await getBuffer(anumvl.result)
