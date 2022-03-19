@@ -57,6 +57,7 @@ const { pinterest } = require('./lib/pinterest')
 const { uploadimg, upload } = require('./lib/uploadimg')
 const { uploadImages } = require('./lib/uploadimage')
 const { mediafireDl } = require('./lib/mediafire.js')
+const { yta, ytv} = require('../lib/y2mate')
 
 //══════════[ Leveling and Rpg ]══════════//
 
@@ -1731,7 +1732,46 @@ ini = await fetchJson(`ttps://login-apikeybear.herokuapp.com/api/ytmp3?url=${bo}
 mp3 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp3, audio, { quoted: mek})
 break
-case 'ytmp3':
+
+
+case 'ytmp3': {
+if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
+			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
+			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
+			var mulaikah = args.join(' ')
+			await reply(lang.wait())
+                zee.Youtube(mulaikah).then(async (data) => {
+                    let txt = `*----「 YOUTUBE AUDIO 」----*\n\n`
+                    txt += `*• Quality :* ${data.medias[7].quality}\n`
+                    txt += `*• Type :* ${data.medias[7].extension}\n`
+                    txt += `*• Size :* ${data.medias[7].formattedSize}\n`
+                    txt += `*• Url Source :* ${data.url}\n\n`
+                    txt += `_Mohon tunggu sebentar , uploading media..._`
+                    sendFileFromUrl(from, data.thumbnail, txt, mek)
+                    sendFileFromUrl(from, data.medias[7].url, '', mek)
+                })
+                }
+             break
+case 'ytmp4': {
+if (!isHaruka) return sendButMessage(from, lang.noregis(pushname), `Klik Button Untuk Verify`, [{buttonId: '.daftar',buttonText: {displayText: `Daftar`,},type: 1,}], {quoted: fgif});
+			if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3* _Url YouTube_`)
+			if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link tidak valid!')
+			var mulaikah = args.join(' ')
+			zee.Youtube(mulaikah).then(async (data) => {
+                    let txt = `*----「 YOUTUBE VIDEO 」----*\n\n`
+                    txt += `*• Quality :* ${data.medias[1].quality}\n`
+                    txt += `*• Type :* ${data.medias[1].extension}\n`
+                    txt += `*• Size :* ${data.medias[1].formattedSize}\n`
+                    txt += `*• Url Source :* ${data.url}\n\n`
+                    txt += `_Mohon tunggu sebentar , uploading media..._`
+                    sendFileFromUrl(from, data.thumbnail, txt, mek)
+                    sendFileFromUrl(from, data.medias[1].url, '', mek)                    
+                })
+                }
+             break  
+
+
+case 'ytmp31':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
@@ -1740,7 +1780,7 @@ ytmp3 = await getBuffer(anump3.result.url)
 reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
-case 'ytmp4':
+case 'ytmp41':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
